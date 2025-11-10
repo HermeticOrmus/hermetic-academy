@@ -3,20 +3,39 @@
 
 import Stripe from 'stripe';
 
-// Initialize Stripe with secret key
-const stripeSecretKey = process.env.STRIPE_TEST_MODE === 'true'
-  ? process.env.STRIPE_SECRET_KEY_TEST
-  : process.env.STRIPE_SECRET_KEY;
+// Lazy initialization to prevent build-time errors
+let stripeInstance: Stripe | null = null;
 
-if (!stripeSecretKey) {
-  throw new Error(
-    'Missing Stripe secret key. Please set STRIPE_SECRET_KEY or STRIPE_SECRET_KEY_TEST in .env.local'
-  );
+/**
+ * Get Stripe instance (lazy initialization)
+ * This prevents Stripe from being initialized during build time
+ */
+export function getStripe(): Stripe {
+  if (!stripeInstance) {
+    const stripeSecretKey = process.env.STRIPE_TEST_MODE === 'true'
+      ? process.env.STRIPE_SECRET_KEY_TEST
+      : process.env.STRIPE_SECRET_KEY;
+
+    if (!stripeSecretKey) {
+      throw new Error(
+        'Missing Stripe secret key. Please set STRIPE_SECRET_KEY or STRIPE_SECRET_KEY_TEST in .env.local'
+      );
+    }
+
+    stripeInstance = new Stripe(stripeSecretKey, {
+      apiVersion: '2025-10-29.clover',
+      typescript: true,
+    });
+  }
+
+  return stripeInstance;
 }
 
-export const stripe = new Stripe(stripeSecretKey, {
-  apiVersion: '2025-10-29.clover',
-  typescript: true,
+// Legacy export for backward compatibility (calls getStripe())
+export const stripe = new Proxy({} as Stripe, {
+  get: (_, prop) => {
+    return (getStripe() as any)[prop];
+  }
 });
 
 // Get publishable key for client-side
@@ -106,7 +125,7 @@ export async function createCheckoutSession(
   ];
 
   // Create checkout session
-  const session = await stripe.checkout.sessions.create({
+  const session = await getStripe().checkout.sessions.create({
     mode: 'payment',
     line_items: lineItems,
     success_url: successUrl,
@@ -151,7 +170,7 @@ export async function createSupportSubscription(
 
   // Create or retrieve customer
   let customer: Stripe.Customer;
-  const existingCustomers = await stripe.customers.list({
+  const existingCustomers = await getStripe().customers.list({
     email: userEmail,
     limit: 1,
   });
@@ -159,7 +178,7 @@ export async function createSupportSubscription(
   if (existingCustomers.data.length > 0) {
     customer = existingCustomers.data[0];
   } else {
-    customer = await stripe.customers.create({
+    customer = await getStripe().customers.create({
       email: userEmail,
       metadata: {
         userId,
@@ -168,7 +187,7 @@ export async function createSupportSubscription(
   }
 
   // Create checkout session for subscription
-  const session = await stripe.checkout.sessions.create({
+  const session = await getStripe().checkout.sessions.create({
     mode: 'subscription',
     customer: customer.id,
     line_items: [
@@ -215,7 +234,7 @@ export async function createCustomerPortalSession(
   customerId: string,
   returnUrl: string
 ): Promise<Stripe.BillingPortal.Session> {
-  const session = await stripe.billingPortal.sessions.create({
+  const session = await getStripe().billingPortal.sessions.create({
     customer: customerId,
     return_url: returnUrl,
   });
@@ -234,7 +253,7 @@ export async function processRefund(
   paymentIntentId: string,
   reason?: string
 ): Promise<Stripe.Refund> {
-  const refund = await stripe.refunds.create({
+  const refund = await getStripe().refunds.create({
     payment_intent: paymentIntentId,
     reason: 'requested_by_customer',
     metadata: {
@@ -266,7 +285,7 @@ export function verifyWebhookSignature(
   }
 
   try {
-    return stripe.webhooks.constructEvent(payload, signature, webhookSecret);
+    return getStripe().webhooks.constructEvent(payload, signature, webhookSecret);
   } catch (err) {
     throw new Error(`Webhook signature verification failed: ${err instanceof Error ? err.message : 'Unknown error'}`);
   }
