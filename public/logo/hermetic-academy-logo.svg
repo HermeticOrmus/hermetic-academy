@@ -1,0 +1,64 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F4E4C1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9A7E2E;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Realm gradient (7 principle colors) -->
+    <linearGradient id="realmGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E63946;stop-opacity:1" />
+      <stop offset="16.66%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="33.33%" style="stop-color:#FFD93D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="66.66%" style="stop-color:#4CC9F0;stop-opacity:1" />
+      <stop offset="83.33%" style="stop-color:#9D4EDD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Central circle (cosmic foundation) -->
+  <circle cx="100" cy="100" r="35" fill="#0A0A0A" stroke="url(#goldGradient)" stroke-width="2.5" filter="url(#glow)"/>
+
+  <!-- 7-pointed crown (Hermetic Principles) -->
+  <!-- Point 1: Mentalism (top) -->
+  <path d="M 100 30 L 110 70 L 90 70 Z" fill="url(#realmGradient)" stroke="url(#goldGradient)" stroke-width="1.5" filter="url(#glow)"/>
+
+  <!-- Point 2: Correspondence (upper right) -->
+  <path d="M 150 50 L 125 80 L 120 65 Z" fill="url(#realmGradient)" stroke="url(#goldGradient)" stroke-width="1.5" filter="url(#glow)"/>
+
+  <!-- Point 3: Vibration (lower right) -->
+  <path d="M 165 110 L 130 110 L 125 95 Z" fill="url(#realmGradient)" stroke="url(#goldGradient)" stroke-width="1.5" filter="url(#glow)"/>
+
+  <!-- Point 4: Polarity (bottom right) -->
+  <path d="M 150 150 L 120 135 L 125 120 Z" fill="url(#realmGradient)" stroke="url(#goldGradient)" stroke-width="1.5" filter="url(#glow)"/>
+
+  <!-- Point 5: Rhythm (bottom) -->
+  <path d="M 100 170 L 90 130 L 110 130 Z" fill="url(#realmGradient)" stroke="url(#goldGradient)" stroke-width="1.5" filter="url(#glow)"/>
+
+  <!-- Point 6: Cause-Effect (bottom left) -->
+  <path d="M 50 150 L 75 120 L 80 135 Z" fill="url(#realmGradient)" stroke="url(#goldGradient)" stroke-width="1.5" filter="url(#glow)"/>
+
+  <!-- Point 7: Gender (upper left) -->
+  <path d="M 35 110 L 70 110 L 75 95 Z" fill="url(#realmGradient)" stroke="url(#goldGradient)" stroke-width="1.5" filter="url(#glow)"/>
+
+  <!-- Inner sacred geometry (Flower of Life center) -->
+  <circle cx="100" cy="100" r="15" fill="none" stroke="url(#goldGradient)" stroke-width="1" opacity="0.5"/>
+  <circle cx="100" cy="88" r="12" fill="none" stroke="url(#goldGradient)" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="110" cy="94" r="12" fill="none" stroke="url(#goldGradient)" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="110" cy="106" r="12" fill="none" stroke="url(#goldGradient)" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="100" cy="112" r="12" fill="none" stroke="url(#goldGradient)" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="90" cy="106" r="12" fill="none" stroke="url(#goldGradient)" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="90" cy="94" r="12" fill="none" stroke="url(#goldGradient)" stroke-width="0.8" opacity="0.4"/>
+</svg>

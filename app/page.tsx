@@ -8,7 +8,7 @@ export default function HomePage() {
       <section className="py-20 px-4 text-center border-b border-gray-800">
         <div className="max-w-4xl mx-auto space-y-6">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cosmic-purple via-cosmic-gold to-cosmic-purple bg-clip-text text-transparent">
-            Hermetic Youth
+            Hermetic Academy
           </h1>
           <p className="text-xl md:text-2xl text-gray-400">
             Discover the 7 Hermetic Principles through interactive experiences

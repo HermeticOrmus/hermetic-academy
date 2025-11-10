@@ -1,4 +1,4 @@
-# Hermetic Youth
+# Hermetic Academy
 
 **Interactive webapp teaching the 7 Hermetic Principles to youth (ages 11-18)**
 
@@ -209,7 +209,7 @@ MIT License - see [LICENSE](./LICENSE) for details.
 
 ## Contact
 
-**Project**: Hermetic Youth
+**Project**: Hermetic Academy
 **Philosophy**: Gold Hat Technology
 **Status**: Autonomous execution by Sol (Phase 1)
 

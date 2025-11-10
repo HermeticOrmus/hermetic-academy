@@ -15,7 +15,7 @@
 - ✅ `.env.local` configured with credentials
 
 ### Project
-- ✅ Renamed from `hermetic-youth` → `hermetic-academy`
+- ✅ Renamed from `hermetic-academy` → `hermetic-academy`
 - ✅ All references updated
 - ✅ Ready for development
 

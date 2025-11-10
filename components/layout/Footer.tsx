@@ -11,7 +11,7 @@ export function Footer() {
               About
             </h3>
             <p className="text-sm text-gray-400">
-              Hermetic Youth teaches the 7 Hermetic Principles through
+              Hermetic Academy teaches the 7 Hermetic Principles through
               interactive experiences. Timeless wisdom for modern minds.
             </p>
           </div>
@@ -32,8 +32,23 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Philosophy */}
+          {/* Links & Philosophy */}
           <div>
+            <h3 className="text-sm font-semibold text-cosmic-gold mb-4">
+              Community
+            </h3>
+            <ul className="space-y-2 text-sm text-gray-400 mb-6">
+              <li>
+                <a href="/shop" className="hover:text-cosmic-gold transition-colors">
+                  🎨 Shop (Optional Cosmetics)
+                </a>
+              </li>
+              <li>
+                <a href="/support" className="hover:text-cosmic-gold transition-colors">
+                  💛 Support Sacred Technology
+                </a>
+              </li>
+            </ul>
             <h3 className="text-sm font-semibold text-cosmic-gold mb-4">
               Philosophy
             </h3>
@@ -49,7 +64,7 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
           <p>
-            &copy; {currentYear} Hermetic Youth. Open source MIT License.
+            &copy; {currentYear} Hermetic Academy. Open source MIT License.
           </p>
           <p className="mt-2 sm:mt-0">
             Built with{" "}

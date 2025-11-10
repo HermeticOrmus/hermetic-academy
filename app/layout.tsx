@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hermetic Youth | Discover the 7 Principles",
+  title: "Hermetic Academy | Discover the 7 Principles",
   description: "Interactive experiences teaching the 7 Hermetic Principles to youth. Timeless wisdom, modern exploration.",
   keywords: ["hermetic", "principles", "youth", "education", "wisdom", "philosophy"],
 };

@@ -10,6 +10,8 @@ export function Navigation() {
 
   const links = [
     { href: "/", label: "Home" },
+    { href: "/shop", label: "Shop" },
+    { href: "/support", label: "Support" },
   ];
 
   return (
@@ -17,10 +19,16 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-cosmic-purple to-cosmic-gold rounded-full" />
-            <span className="font-bold text-xl bg-gradient-to-r from-cosmic-purple to-cosmic-gold bg-clip-text text-transparent">
-              Hermetic Youth
+          <Link href="/" className="flex items-center space-x-3">
+            <img
+              src="/logo/hermetic-academy-logo.svg"
+              alt="Hermetic Academy Logo"
+              className="w-10 h-10"
+            />
+            <span className="font-bold text-xl" style={{ fontFamily: 'var(--font-display)' }}>
+              <span className="bg-gradient-to-r from-gold-divine to-gold-radiant bg-clip-text text-transparent">
+                Hermetic Academy
+              </span>
             </span>
           </Link>
 

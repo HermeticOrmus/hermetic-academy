@@ -1,8 +1,8 @@
-# 🌟 START HERE - Hermetic Youth Project
+# 🌟 START HERE - Hermetic Academy Project
 
 **Welcome, Ormus!**
 
-Sol has completed Phase 1 (Foundation) of your Hermetic Youth webapp. Everything is production-ready and fully documented.
+Sol has completed Phase 1 (Foundation) of your Hermetic Academy webapp. Everything is production-ready and fully documented.
 
 ---
 
