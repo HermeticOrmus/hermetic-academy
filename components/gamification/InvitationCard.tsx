@@ -61,7 +61,7 @@ export function InvitationCard({
         {expiresNever && (
           <div className="invitation-expires">
             <span className="expires-icon">∞</span>
-            <span className="expires-text">This invitation never expires</span>
+            <span className="expires-text">No timer. Accept whenever. Skip if it doesn't hit.</span>
           </div>
         )}
       </div>
@@ -72,7 +72,7 @@ export function InvitationCard({
           onClick={onAccept}
           style={{ borderColor: realmColor }}
         >
-          Accept When Ready
+          Accept Quest
         </button>
       </div>
 

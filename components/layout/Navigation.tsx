@@ -10,8 +10,8 @@ export function Navigation() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/heart-preview", label: "Divine Middle" },
-    { href: "/shop", label: "Shop" },
+    { href: "/heart-preview", label: "How It Works" },
+    { href: "/shop", label: "Cosmetics" },
     { href: "/support", label: "Support" },
   ];
 

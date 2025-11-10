@@ -22,13 +22,13 @@ export function WeeklyRhythm({
           {isSabbathHonored ? '🌙' : '☀️'}
         </div>
         <div className="rhythm-content">
-          <div className="rhythm-label">Weekly Rhythm</div>
+          <div className="rhythm-label">Your Rotation</div>
           <div className="rhythm-days">
             {activeDaysThisWeek}/7 days this week
           </div>
           {currentStreak > 0 && (
             <div className="rhythm-streak">
-              {currentStreak} {currentStreak === 1 ? 'week' : 'weeks'} of beautiful rhythm
+              {currentStreak} {currentStreak === 1 ? 'week' : 'weeks'} streak - clean rotation
             </div>
           )}
         </div>
@@ -43,7 +43,7 @@ export function WeeklyRhythm({
             }`}
           >
             {day === 6 ? (
-              <span className="day-label">Rest</span>
+              <span className="day-label">CD</span>
             ) : (
               <span className="day-label">{day + 1}</span>
             )}
@@ -54,32 +54,32 @@ export function WeeklyRhythm({
       {/* Wisdom Messages */}
       {activeDaysThisWeek === 0 && (
         <div className="rhythm-message welcome">
-          <p>🌱 Welcome! Begin when you're ready.</p>
-          <p className="message-sub">No pressure. This is your journey.</p>
+          <p>🌱 Start when you're ready.</p>
+          <p className="message-sub">No timer. No rush. Just you vs you.</p>
         </div>
       )}
 
       {activeDaysThisWeek > 0 && activeDaysThisWeek < 6 && (
         <div className="rhythm-message encouraging">
-          <p>✨ {activeDaysThisWeek} {activeDaysThisWeek === 1 ? 'day' : 'days'} practiced this week!</p>
-          <p className="message-sub">Beautiful start. Continue when it feels right.</p>
+          <p>✨ {activeDaysThisWeek} {activeDaysThisWeek === 1 ? 'day' : 'days'} active this week!</p>
+          <p className="message-sub">Clean rotation building. Keep it up when ready.</p>
         </div>
       )}
 
       {isSabbathHonored && !isRestDay && (
         <div className="rhythm-message sacred">
-          <p>🌙 Sacred rhythm achieved - 6 days of practice!</p>
-          <p className="message-sub">Day 7 is for rest and integration. Honor it.</p>
+          <p>🌙 Clean rotation complete - 6 days active!</p>
+          <p className="message-sub">Day 7 = Cooldown. No XP farming. Pure mana regen.</p>
         </div>
       )}
 
       {isRestDay && (
         <div className="rhythm-message sabbath">
-          <p>💛 You came on Sabbath (Day 7)!</p>
+          <p>💛 It's Day 7 (Cooldown Day)</p>
           <p className="message-sub">
-            This is rest day. Consider: journal, reflect, integrate what you learned.
+            No grind today. Reflect, integrate, touch grass if you want.
             <br />
-            No new practices today—just being.
+            Mana regen day. Come back tomorrow recharged.
           </p>
         </div>
       )}

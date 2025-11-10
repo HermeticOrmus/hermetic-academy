@@ -4,9 +4,9 @@ import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hermetic Academy | Discover the 7 Principles",
-  description: "Interactive experiences teaching the 7 Hermetic Principles to youth. Timeless wisdom, modern exploration.",
-  keywords: ["hermetic", "principles", "youth", "education", "wisdom", "philosophy"],
+  title: "Hermetic Academy | Level Up IRL",
+  description: "Ancient wisdom for gamers. You've mastered League, Fortnite, WoW. Apply that same skill to reality. AAA gamification. Free forever.",
+  keywords: ["hermetic", "principles", "gaming", "league of legends", "self-improvement", "gamers", "youth", "level up"],
 };
 
 export default function RootLayout({

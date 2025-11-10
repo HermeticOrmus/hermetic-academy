@@ -10,41 +10,41 @@ export function SabbathCard({ weekNumber = 1 }: SabbathCardProps) {
       <div className="sabbath-header">
         <div className="sabbath-icon">🌙</div>
         <div className="sabbath-title">
-          <h3>Day 7: Sabbath</h3>
-          <p>Week {weekNumber} Integration</p>
+          <h3>Day 7: Cooldown</h3>
+          <p>Week {weekNumber} Mana Regen</p>
         </div>
       </div>
 
       <div className="sabbath-content">
         <div className="sabbath-section">
-          <h4>🌅 This Day is For:</h4>
+          <h4>🌅 Cooldown Day Activities:</h4>
           <ul>
-            <li>Rest and restoration</li>
-            <li>Reflecting on the week</li>
-            <li>Integration (letting wisdom settle)</li>
-            <li>Celebration (honoring your practice)</li>
-            <li>Being, not doing</li>
+            <li>Rest (recharge your mental mana)</li>
+            <li>Review the week (what worked, what didn't)</li>
+            <li>Let it sink in (no forcing, just integrating)</li>
+            <li>Celebrate your streak (you earned it)</li>
+            <li>No grind. Just exist.</li>
           </ul>
         </div>
 
         <div className="sabbath-section">
-          <h4>✨ Gentle Sabbath Invitations:</h4>
+          <h4>✨ Optional Side Activities:</h4>
           <div className="sabbath-invitations">
             <div className="sabbath-invitation">
               <span className="inv-icon">📖</span>
-              <span className="inv-text">Journal about one insight from this week</span>
+              <span className="inv-text">Journal one insight from this week</span>
             </div>
             <div className="sabbath-invitation">
               <span className="inv-icon">🌳</span>
-              <span className="inv-text">Spend time in nature, no agenda</span>
+              <span className="inv-text">Touch grass (literally)</span>
             </div>
             <div className="sabbath-invitation">
               <span className="inv-icon">🎨</span>
-              <span className="inv-text">Create something for pure joy</span>
+              <span className="inv-text">Make something for fun (no goals)</span>
             </div>
             <div className="sabbath-invitation">
               <span className="inv-icon">💛</span>
-              <span className="inv-text">Connect with someone you love</span>
+              <span className="inv-text">Hang with people you actually like</span>
             </div>
           </div>
         </div>
@@ -52,11 +52,11 @@ export function SabbathCard({ weekNumber = 1 }: SabbathCardProps) {
         <div className="sabbath-wisdom">
           <p>
             <em>
-              "The Sabbath is not about stopping work. It's about starting to live."
+              "Cooldowns aren't downtime. They're when your mana regenerates."
             </em>
           </p>
           <p className="wisdom-sub">
-            — The Hermetic Principle of Rhythm
+            — The Hermetic Principle of Rhythm (but make it gaming)
           </p>
         </div>
       </div>

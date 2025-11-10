@@ -57,7 +57,7 @@ export function PathDisplay({
       <div className="path-header">
         <div className="path-icon">{icon || STAGE_ICONS[stage]}</div>
         <div className="path-info">
-          <div className="path-label">Your Journey</div>
+          <div className="path-label">Your Rank (Solo Queue)</div>
           <div className="path-stage" style={{ color: realmColor }}>
             {stage}
           </div>
@@ -82,8 +82,8 @@ export function PathDisplay({
 
       {isUnified && (
         <div className="path-unified">
-          <p>🌌 You have unified with the wisdom.</p>
-          <p className="unified-sub">Continue deepening. Share with others. The journey never ends.</p>
+          <p>🌌 You hit max rank.</p>
+          <p className="unified-sub">Now you teach others. Share what you learned. The grind never truly ends.</p>
         </div>
       )}
 

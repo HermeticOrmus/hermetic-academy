@@ -34,14 +34,13 @@ export default function HeartPreview() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-realm-1-mentalism via-gold-divine to-realm-7-gender bg-clip-text text-transparent">
-            The Divine Middle
+            How It Works
           </h1>
           <p className="text-2xl text-text-secondary mb-4">
-            The polish of AAA games. The heart of Hermetic wisdom.
+            AAA polish. Gaming mechanics. Ancient wisdom.
           </p>
           <p className="text-lg text-text-tertiary max-w-3xl mx-auto">
-            For 11-18 year olds who've mastered virtual worlds and are ready to apply that
-            dedication to the game that actually matters: <strong className="text-gold-divine">their own consciousness</strong>.
+            For gamers who've mastered League, Fortnite, WoW and want to apply that same dedication to the game that actually matters: <strong className="text-gold-divine">leveling up IRL</strong>.
           </p>
         </div>
 
@@ -76,16 +75,16 @@ export default function HeartPreview() {
           <SabbathCard weekNumber={3} />
         </div>
 
-        {/* Invitations (not challenges) */}
+        {/* Side Quests */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-8 text-center font-display">
             <span className="bg-gradient-to-r from-gold-divine to-gold-radiant bg-clip-text text-transparent">
-              Open Invitations
+              Side Quests Available
             </span>
           </h2>
           <p className="text-center text-text-tertiary mb-12 max-w-2xl mx-auto">
-            These never expire. Accept when you're ready. Skip if it doesn't call to you.
-            This is your journey, your timing.
+            No timer. No pressure. Accept when you want. Skip what doesn't hit.
+            Your game, your pace.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -138,11 +137,11 @@ export default function HeartPreview() {
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-4 text-center font-display">
             <span className="bg-gradient-to-r from-gold-divine to-gold-radiant bg-clip-text text-transparent">
-              Your Milestones
+              Achievements Unlocked
             </span>
           </h2>
           <p className="text-center text-text-tertiary mb-12">
-            These mark moments of genuine understanding, not competition with others.
+            Your progress. Not compared to anyone else. Just you vs you.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
@@ -206,36 +205,36 @@ export default function HeartPreview() {
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-8">
             <div>
-              <h3 className="text-xl font-bold mb-3 text-gold-divine">✅ We Keep:</h3>
+              <h3 className="text-xl font-bold mb-3 text-gold-divine">✅ What We Keep (AAA Polish):</h3>
               <ul className="space-y-2 text-text-secondary">
-                <li>• Beautiful animations & polish</li>
-                <li>• Clear progress tracking</li>
-                <li>• Satisfying celebrations</li>
-                <li>• Engaging experiences</li>
-                <li>• Visual feedback</li>
+                <li>• Smooth animations (60fps)</li>
+                <li>• Clear progression system</li>
+                <li>• Satisfying reward moments</li>
+                <li>• Engaging gameplay loops</li>
+                <li>• Instant visual feedback</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-3 text-realm-4-polarity">❌ We Remove:</h3>
+              <h3 className="text-xl font-bold mb-3 text-realm-4-polarity">❌ What We Cut (Dark Patterns):</h3>
               <ul className="space-y-2 text-text-secondary">
-                <li>• Comparison with others</li>
-                <li>• FOMO & urgency</li>
-                <li>• Streak anxiety</li>
-                <li>• Grind mentality</li>
-                <li>• External validation addiction</li>
+                <li>• Leaderboards (no comparison)</li>
+                <li>• FOMO timers</li>
+                <li>• Streak guilt trips</li>
+                <li>• Toxic grind culture</li>
+                <li>• Validation addiction loops</li>
               </ul>
             </div>
           </div>
 
           <div className="max-w-3xl mx-auto mb-8">
-            <h3 className="text-2xl font-bold mb-4 text-gold-divine">💛 We Add:</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gold-divine">💛 What We Add (The Heart):</h3>
             <ul className="space-y-3 text-text-secondary text-left max-w-2xl mx-auto">
-              <li>• <strong>Sabbath Rest:</strong> Day 7 is sacred integration, not grinding</li>
-              <li>• <strong>Heart Checks:</strong> Notice how you feel, adjust accordingly</li>
-              <li>• <strong>Invitations:</strong> Accept when ready, skip if it doesn't call</li>
-              <li>• <strong>Depth Over Speed:</strong> Reflection matters more than completing tasks</li>
-              <li>• <strong>Journey Not Rank:</strong> Where YOU are, not compared to others</li>
+              <li>• <strong>Cooldown Days:</strong> Day 7 = mana regen, not grinding</li>
+              <li>• <strong>Mental State Checks:</strong> How you feel matters</li>
+              <li>• <strong>Side Quests:</strong> No timer, accept whenever, skip if it doesn't hit</li>
+              <li>• <strong>Depth &gt; Speed:</strong> Understanding &gt; task completion</li>
+              <li>• <strong>Solo Queue Only:</strong> Just you vs you, no one watching</li>
             </ul>
           </div>
 
@@ -244,13 +243,13 @@ export default function HeartPreview() {
               href="/"
               className="px-8 py-4 bg-gold-divine text-cosmic-black font-display font-bold text-lg rounded-xl hover:bg-gold-radiant transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(212,175,55,0.6)]"
             >
-              Begin Your Journey
+              Start at Seeker I →
             </a>
             <a
               href="/shop"
               className="px-8 py-4 bg-transparent border-2 border-gold-divine text-gold-divine font-display font-bold text-lg rounded-xl hover:bg-gold-divine/20 transition-all hover:scale-105"
             >
-              Optional Cosmetics
+              Cosmetics (Optional)
             </a>
           </div>
         </div>
