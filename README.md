@@ -91,8 +91,8 @@ This project embodies **sacred technology** principles:
 
 ```bash
 # Clone the repository
-git clone https://github.com/HermeticOrmus/hermetic-youth.git
-cd hermetic-youth
+git clone https://github.com/HermeticOrmus/hermetic-academy.git
+cd hermetic-academy
 
 # Install dependencies
 npm install
@@ -116,7 +116,7 @@ See [DATABASE.md](./docs/DATABASE.md) for complete Supabase configuration.
 ## Project Structure
 
 ```
-hermetic-youth/
+hermetic-academy/
 ├── app/                    # Next.js app directory
 │   ├── layout.tsx          # Root layout
 │   ├── page.tsx            # Homepage
@@ -213,7 +213,7 @@ MIT License - see [LICENSE](./LICENSE) for details.
 **Philosophy**: Gold Hat Technology
 **Status**: Autonomous execution by Sol (Phase 1)
 
-For questions or collaboration: [Open an issue](https://github.com/HermeticOrmus/hermetic-youth/issues)
+For questions or collaboration: [Open an issue](https://github.com/HermeticOrmus/hermetic-academy/issues)
 
 ---
 

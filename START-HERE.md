@@ -19,7 +19,7 @@ Sol has completed Phase 1 (Foundation) of your Hermetic Youth webapp. Everything
 
 ### Comprehensive Documentation
 - ✅ **HANDOFF-REPORT.md** - Complete execution report
-- ✅ **~/dev/hermetic-youth/** - Full implementation docs
+- ✅ **~/dev/hermetic-academy/** - Full implementation docs
 - ✅ **GITHUB-SETUP.md** - Repository creation guide
 - ✅ **SUPABASE-SETUP.md** - Database setup guide
 - ✅ **README.md** - Project overview
@@ -31,8 +31,8 @@ Sol has completed Phase 1 (Foundation) of your Hermetic Youth webapp. Everything
 ### 1. GitHub Repository (5 min)
 ```bash
 # Option A: Via GitHub CLI (if installed)
-cd C:/Users/ormus/projects/01-ACTIVE/hermetic-youth
-gh repo create HermeticOrmus/hermetic-youth --public --source=. --remote=origin
+cd C:/Users/ormus/projects/01-ACTIVE/hermetic-academy
+gh repo create HermeticOrmus/hermetic-academy --public --source=. --remote=origin
 git push -u origin main
 
 # Option B: Via web (https://github.com/new)
@@ -43,7 +43,7 @@ git push -u origin main
 
 ### 2. Supabase Project (5 min)
 1. Go to https://supabase.com/dashboard
-2. Create new project: `hermetic-youth`
+2. Create new project: `hermetic-academy`
 3. SQL Editor → Copy contents of `supabase/migrations/001_initial_schema.sql`
 4. Run SQL
 5. Settings → API → Copy URL and anon key
@@ -57,7 +57,7 @@ git push -u origin main
 
 ### 3. Test Locally (2 min)
 ```bash
-cd C:/Users/ormus/projects/01-ACTIVE/hermetic-youth
+cd C:/Users/ormus/projects/01-ACTIVE/hermetic-academy
 npm run dev
 ```
 
@@ -69,7 +69,7 @@ Open http://localhost:3000 - you should see a beautiful cosmic homepage!
 
 ### File Structure
 ```
-hermetic-youth/
+hermetic-academy/
 ├── app/
 │   ├── layout.tsx          # Navigation + Footer integrated
 │   ├── page.tsx            # Beautiful homepage with all 7 principles
@@ -123,8 +123,8 @@ Ship the homepage publicly, then add features iteratively.
 **Read These (In Order)**:
 1. **START-HERE.md** (you are here)
 2. **HANDOFF-REPORT.md** (complete execution report)
-3. **~/dev/hermetic-youth/plan.md** (full architecture)
-4. **~/dev/hermetic-youth/context.md** (design system + principles)
+3. **~/dev/hermetic-academy/plan.md** (full architecture)
+4. **~/dev/hermetic-academy/context.md** (design system + principles)
 
 **Setup Guides**:
 - **GITHUB-SETUP.md** (repository creation)
@@ -192,13 +192,13 @@ The foundation isn't imperfect—it's **complete for Phase 1**.
 
 ### If Something Isn't Clear
 1. Check **HANDOFF-REPORT.md** (most questions answered there)
-2. Check **~/dev/hermetic-youth/** docs (implementation details)
+2. Check **~/dev/hermetic-academy/** docs (implementation details)
 3. Check Next.js/Supabase docs (framework questions)
 
 ### If You Want to Extend
 - Patterns documented in HANDOFF-REPORT.md
 - Examples in existing code (`components/`, `lib/`)
-- Design system in `~/dev/hermetic-youth/context.md`
+- Design system in `~/dev/hermetic-academy/context.md`
 
 ---
 

@@ -1,8 +1,7 @@
--- Hermetic Youth Database Schema
+-- Hermetic Academy Database Schema
 -- Initial migration: Core tables for principles, progress, community
 
--- Enable UUID extension
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+-- PostgreSQL 13+ has gen_random_uuid() built-in, no extension needed
 
 -- ============================================================================
 -- PROFILES
@@ -43,7 +42,7 @@ CREATE POLICY "Users can insert own profile"
 -- ============================================================================
 
 CREATE TABLE principle_progress (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
   principle_id INT NOT NULL CHECK (principle_id >= 1 AND principle_id <= 7),
   completed BOOLEAN DEFAULT false,
@@ -76,7 +75,7 @@ CREATE POLICY "Users can update own progress"
 -- ============================================================================
 
 CREATE TABLE reflections (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
   principle_id INT NOT NULL CHECK (principle_id >= 1 AND principle_id <= 7),
   content TEXT NOT NULL CHECK (char_length(content) >= 10 AND char_length(content) <= 1000),
@@ -112,7 +111,7 @@ CREATE POLICY "Users can delete own reflections"
 -- ============================================================================
 
 CREATE TABLE wisdom_reactions (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   reflection_id UUID REFERENCES reflections(id) ON DELETE CASCADE NOT NULL,
   user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
   created_at TIMESTAMPTZ DEFAULT NOW(),
@@ -141,7 +140,7 @@ CREATE POLICY "Users can delete own wisdom reactions"
 -- ============================================================================
 
 CREATE TABLE cosmetic_unlocks (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
   cosmetic_type TEXT NOT NULL CHECK (cosmetic_type IN ('theme', 'badge', 'avatar')),
   cosmetic_id TEXT NOT NULL,

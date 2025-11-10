@@ -56,7 +56,7 @@
 
 ### ✅ Documentation Created
 
-**Development Docs** (`~/dev/hermetic-youth/`):
+**Development Docs** (`~/dev/hermetic-academy/`):
 - `plan.md` - Complete implementation plan with architecture
 - `context.md` - All 7 principles explained + design system + content tone
 - `tasks.md` - Granular task checklist (~130 tasks)
@@ -181,7 +181,7 @@ export function MentalismExperience() {
 ## File Structure (Complete)
 
 ```
-hermetic-youth/
+hermetic-academy/
 ├── .git/                          ✅ Initialized
 ├── .github/                       ⬜ Create workflows (CI/CD)
 ├── app/
@@ -274,11 +274,11 @@ hermetic-youth/
 **Steps**:
 ```bash
 # Via GitHub web or CLI
-gh repo create HermeticOrmus/hermetic-youth --public --source=. --remote=origin
+gh repo create HermeticOrmus/hermetic-academy --public --source=. --remote=origin
 git push -u origin main
 ```
 
-**See**: `~/dev/hermetic-youth/GITHUB-SETUP.md`
+**See**: `~/dev/hermetic-academy/GITHUB-SETUP.md`
 
 ### 2. Supabase Project (10 minutes)
 **Status**: Schema ready, needs deployment
@@ -288,11 +288,11 @@ git push -u origin main
 2. Run migration SQL in SQL Editor
 3. Copy URL and anon key to `.env.local`
 
-**See**: `~/dev/hermetic-youth/SUPABASE-SETUP.md`
+**See**: `~/dev/hermetic-academy/SUPABASE-SETUP.md`
 
 ### 3. Test Locally (2 minutes)
 ```bash
-cd C:/Users/ormus/projects/01-ACTIVE/hermetic-youth
+cd C:/Users/ormus/projects/01-ACTIVE/hermetic-academy
 npm run dev
 ```
 
@@ -514,7 +514,7 @@ Sol built a **production-ready foundation** with clear patterns for completion. 
 ## Resources & References
 
 ### Documentation
-- **Dev Docs**: `~/dev/hermetic-youth/` (plan, context, tasks)
+- **Dev Docs**: `~/dev/hermetic-academy/` (plan, context, tasks)
 - **Setup Guides**: `GITHUB-SETUP.md`, `SUPABASE-SETUP.md`
 - **README**: Complete project overview
 - **This Report**: Comprehensive handoff
@@ -536,7 +536,7 @@ Sol built a **production-ready foundation** with clear patterns for completion. 
 ## Contact & Support
 
 ### If You Need Help
-1. **Read the docs first** (`~/dev/hermetic-youth/`)
+1. **Read the docs first** (`~/dev/hermetic-academy/`)
 2. **Check Next.js/Supabase docs** (likely answered there)
 3. **Review this handoff report** (patterns and decisions explained)
 

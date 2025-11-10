@@ -1,8 +1,8 @@
 {
-  "name": "hermetic-youth",
+  "name": "hermetic-academy",
   "version": "1.0.0",
   "private": true,
-  "description": "Interactive webapp teaching the 7 Hermetic Principles to youth (11-18)",
+  "description": "Interactive webapp teaching the 7 Hermetic Principles through beautiful experiences (ages 11-18)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,0 +1,79 @@
+# Hermetic Academy - Docker Compose Configuration
+# Complete local development environment with app + database
+
+version: '3.8'
+
+services:
+  # PostgreSQL Database (Local Development)
+  db:
+    image: postgres:15-alpine
+    container_name: hermetic-academy-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: hermetic_dev_password
+      POSTGRES_DB: hermetic_academy
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./supabase/migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - hermetic-network
+
+  # Next.js Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hermetic-academy-app
+    environment:
+      # Database connection (for local dev with Docker)
+      DATABASE_URL: postgresql://postgres:hermetic_dev_password@db:5432/hermetic_academy
+
+      # Supabase (use production or local)
+      # Option 1: Use production Supabase (default)
+      NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+
+      # Option 2: Use local Supabase (if running supabase locally)
+      # NEXT_PUBLIC_SUPABASE_URL: http://localhost:54321
+      # NEXT_PUBLIC_SUPABASE_ANON_KEY: your-local-anon-key
+
+      # Node environment
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - hermetic-network
+    restart: unless-stopped
+
+  # Optional: Supabase Studio (Database UI)
+  # Uncomment to enable local Supabase Studio
+  # studio:
+  #   image: supabase/studio:latest
+  #   container_name: hermetic-academy-studio
+  #   environment:
+  #     SUPABASE_URL: http://db:5432
+  #     POSTGRES_PASSWORD: hermetic_dev_password
+  #   ports:
+  #     - "54323:3000"
+  #   depends_on:
+  #     - db
+  #   networks:
+  #     - hermetic-network
+
+networks:
+  hermetic-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
