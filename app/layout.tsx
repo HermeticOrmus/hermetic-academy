@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Navigation } from "@/components/layout/Navigation";
+import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,8 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="min-h-screen bg-cosmic-black text-cosmic-white antialiased">
-        {children}
+      <body className="min-h-screen bg-cosmic-black text-cosmic-white antialiased flex flex-col">
+        <Navigation />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
