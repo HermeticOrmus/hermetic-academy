@@ -10,7 +10,7 @@ export function Navigation() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/game-preview", label: "Game Preview" },
+    { href: "/heart-preview", label: "Divine Middle" },
     { href: "/shop", label: "Shop" },
     { href: "/support", label: "Support" },
   ];
