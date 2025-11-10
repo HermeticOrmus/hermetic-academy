@@ -290,7 +290,7 @@ ON CONFLICT (id) DO NOTHING;
 INSERT INTO cosmetic_catalog (id, name, description, type, price, preview_url, metadata) VALUES
 ('border-gold-frame', 'Gold Frame', 'Elegant gold border with ornate corners', 'border', 199, '/cosmetics/borders/gold-frame.png', '{"borderColor": "#D4AF37", "borderWidth": "3px"}'),
 ('border-rainbow-glow', 'Rainbow Glow', 'Animated rainbow gradient border', 'border', 299, '/cosmetics/borders/rainbow-glow.png', '{"animation": "rainbow-rotation 3s linear infinite"}'),
-('border-sacred-geometry', 'Sacred Geometry', 'Metatron''s Cube pattern border', 'border', 349, '/cosmetics/borders/sacred-geo.png', '{"pattern": "metatrons-cube"}}')
+('border-sacred-geometry', 'Sacred Geometry', 'Metatron''s Cube pattern border', 'border', 349, '/cosmetics/borders/sacred-geo.png', '{"pattern": "metatrons-cube"}')
 ON CONFLICT (id) DO NOTHING;
 
 -- Bundles
