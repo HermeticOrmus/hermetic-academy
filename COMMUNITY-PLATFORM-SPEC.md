@@ -18,28 +18,28 @@
 
 ## 🎮 Principle-Specific Voting System
 
-**Innovative Feature**: Instead of generic upvote/downvote, users vote on **which specific principles** the analysis demonstrates well.
+**Innovative Feature**: Instead of generic upvote/downvote, users vote on **which specific principles this content helped them LEARN**.
 
 ### How It Works
 
 **On Each Analysis/Comment, Users See 7 Principle Voting Buttons:**
 
 ```
-Did this demonstrate:
-🧠 Mentalism well?        ↑ 234  ↓ 12
-🔄 Correspondence well?   ↑ 189  ↓ 8
-⚡ Vibration well?        ↑ 267  ↓ 15
-⚖️ Polarity well?         ↑ 201  ↓ 22
-🌊 Rhythm well?           ↑ 145  ↓ 31
-🎯 Cause & Effect well?   ↑ 312  ↓ 7
-⚥ Gender well?           ↑ 178  ↓ 19
+Did this help you learn:
+🧠 Mentalism?        ↑ 234  ↓ 12  "Finally understood Mentalism through this!"
+🔄 Correspondence?   ↑ 189  ↓ 8   "Now I see Correspondence everywhere"
+⚡ Vibration?        ↑ 267  ↓ 15  "Vibration clicked for me here"
+⚖️ Polarity?         ↑ 201  ↓ 22  "This explained Polarity perfectly"
+🌊 Rhythm?           ↑ 145  ↓ 31  "Got Rhythm from this example"
+🎯 Cause & Effect?   ↑ 312  ↓ 7   "Best Cause & Effect explanation yet"
+⚥ Gender?           ↑ 178  ↓ 19  "Gender principle finally makes sense"
 ```
 
 **Users can upvote/downvote EACH principle independently:**
-- ✅ Upvote Mentalism (great explanation!)
-- ✅ Upvote Cause & Effect (nailed the causation chain!)
-- ❌ Downvote Gender (weak Gender principle application)
-- 🤷 Don't vote on others (neutral/unsure)
+- ✅ Upvote Mentalism: "This helped me understand Mentalism!"
+- ✅ Upvote Cause & Effect: "The causation chain made it clear!"
+- ❌ Downvote Gender: "Didn't help me learn Gender principle"
+- 🤷 Don't vote on others (neutral/already understood)
 
 ### Why This Is Genius
 
