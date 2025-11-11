@@ -70,9 +70,9 @@ export const HERMETIC_COLORS = {
     tailwind: "green"
   },
 
-  // Principle 5: Rhythm - Virtues (Truth - Blue)
+  // Principle 5: Rhythm - Virtues (Truth - Deep Blue)
   rhythm: {
-    primary: "#4CC9F0",      // Realm 5 primary
+    primary: "#2563EB",      // Deeper blue for better contrast
     secondary: "#7DD9F5",    // Realm 5 light
     dark: "#3BA1C0",         // Realm 5 dark
     subtle: "rgba(76, 201, 240, 0.1)",
@@ -92,9 +92,9 @@ export const HERMETIC_COLORS = {
     tailwind: "purple"
   },
 
-  // Principle 7: Gender - Thrones (Justice - Violet)
+  // Principle 7: Gender - Thrones (Divine Light - Almost White)
   gender: {
-    primary: "#9333EA",      // Realm 7 primary
+    primary: "#E9D5FF",      // Very light purple, almost white
     secondary: "#B870F0",    // Realm 7 light
     dark: "#7629BB",         // Realm 7 dark
     subtle: "rgba(147, 51, 234, 0.1)",
@@ -196,9 +196,9 @@ const config: Config = {
           "4-light": "#34D399",
           "4-dark": "#059669",
 
-          // Rhythm - Blue
-          5: "#4CC9F0",
-          "5-light": "#7DD9F5",
+          // Rhythm - Deep Blue
+          5: "#2563EB",
+          "5-light": "#3B82F6",
           "5-dark": "#3BA1C0",
 
           // Cause & Effect - Purple
@@ -206,9 +206,9 @@ const config: Config = {
           "6-light": "#C18EED",
           "6-dark": "#7E3EB1",
 
-          // Gender - Violet
-          7: "#9333EA",
-          "7-light": "#B870F0",
+          // Gender - Light Purple (Almost White)
+          7: "#E9D5FF",
+          "7-light": "#F3E8FF",
           "7-dark": "#7629BB",
         },
 
@@ -311,9 +311,9 @@ Each principle gets a unique gem design:
 2. **Correspondence (Orange)** - Carnelian double pyramid (as above, so below)
 3. **Vibration (Gold)** - Citrine circle with wave pattern
 4. **Polarity (Green)** - Emerald split gem (duality)
-5. **Rhythm (Blue)** - Sapphire with flowing curves
+5. **Rhythm (Deep Blue)** - Sapphire with flowing curves
 6. **Cause & Effect (Purple)** - Amethyst chain links
-7. **Gender (Violet)** - Fluorite balanced scales
+7. **Gender (Light Purple)** - Moonstone balanced scales (almost white)
 
 ### Progress Indicators
 ```tsx

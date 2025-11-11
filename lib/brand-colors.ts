@@ -87,16 +87,16 @@ export const HERMETIC_COLORS: PrincipleColorMap = {
     tailwind: "green"
   },
 
-  // Principle 5: Rhythm - Virtues (Truth - Blue)
+  // Principle 5: Rhythm - Virtues (Truth - Deep Blue)
   rhythm: {
-    primary: "#4CC9F0",      // Realm 5 primary
-    secondary: "#7DD9F5",    // Realm 5 light
-    dark: "#3BA1C0",         // Realm 5 dark
-    subtle: "rgba(76, 201, 240, 0.1)",    // 10% - Very subtle backgrounds
-    glow: "rgba(76, 201, 240, 0.3)",      // 30% - Glows and shadows
-    opacity30: "rgba(76, 201, 240, 0.3)",  // 30% - Overlays, glass effects
-    opacity60: "rgba(76, 201, 240, 0.6)",  // 60% - Hover states, active elements
-    gradient: "from-blue-500 to-blue-400",
+    primary: "#2563EB",      // Deeper blue (was #4CC9F0)
+    secondary: "#3B82F6",    // Medium blue
+    dark: "#1E40AF",         // Dark blue
+    subtle: "rgba(37, 99, 235, 0.1)",     // 10% - Very subtle backgrounds
+    glow: "rgba(37, 99, 235, 0.3)",       // 30% - Glows and shadows
+    opacity30: "rgba(37, 99, 235, 0.3)",  // 30% - Overlays, glass effects
+    opacity60: "rgba(37, 99, 235, 0.6)",  // 60% - Hover states, active elements
+    gradient: "from-blue-600 to-blue-500",
     tailwind: "blue"
   },
 
@@ -113,17 +113,17 @@ export const HERMETIC_COLORS: PrincipleColorMap = {
     tailwind: "purple"
   },
 
-  // Principle 7: Gender - Thrones (Justice - Violet)
+  // Principle 7: Gender - Thrones (Divine Light Purple - Almost White)
   gender: {
-    primary: "#9333EA",      // Realm 7 primary
-    secondary: "#B870F0",    // Realm 7 light
-    dark: "#7629BB",         // Realm 7 dark
-    subtle: "rgba(147, 51, 234, 0.1)",    // 10% - Very subtle backgrounds
-    glow: "rgba(147, 51, 234, 0.3)",      // 30% - Glows and shadows
-    opacity30: "rgba(147, 51, 234, 0.3)",  // 30% - Overlays, glass effects
-    opacity60: "rgba(147, 51, 234, 0.6)",  // 60% - Hover states, active elements
-    gradient: "from-violet-600 to-violet-400",
-    tailwind: "violet"
+    primary: "#E9D5FF",      // Very light purple, almost white (was #9333EA)
+    secondary: "#F3E8FF",    // Even lighter purple
+    dark: "#C084FC",         // Medium purple for contrast
+    subtle: "rgba(233, 213, 255, 0.1)",    // 10% - Very subtle backgrounds
+    glow: "rgba(233, 213, 255, 0.3)",      // 30% - Glows and shadows
+    opacity30: "rgba(233, 213, 255, 0.3)",  // 30% - Overlays, glass effects
+    opacity60: "rgba(233, 213, 255, 0.6)",  // 60% - Hover states, active elements
+    gradient: "from-purple-200 to-purple-100",
+    tailwind: "purple"
   }
 };
 
@@ -286,27 +286,27 @@ export const TAILWIND_COLORS = {
     deep: FOUNDATION_COLORS.goldDeep,
   },
   realm: {
-    1: HERMETIC_COLORS.mentalism.primary,
-    '1-light': HERMETIC_COLORS.mentalism.secondary,
-    '1-dark': HERMETIC_COLORS.mentalism.dark,
-    2: HERMETIC_COLORS.correspondence.primary,
-    '2-light': HERMETIC_COLORS.correspondence.secondary,
-    '2-dark': HERMETIC_COLORS.correspondence.dark,
-    3: HERMETIC_COLORS.vibration.primary,
-    '3-light': HERMETIC_COLORS.vibration.secondary,
-    '3-dark': HERMETIC_COLORS.vibration.dark,
-    4: HERMETIC_COLORS.polarity.primary,
-    '4-light': HERMETIC_COLORS.polarity.secondary,
-    '4-dark': HERMETIC_COLORS.polarity.dark,
-    5: HERMETIC_COLORS.rhythm.primary,
-    '5-light': HERMETIC_COLORS.rhythm.secondary,
-    '5-dark': HERMETIC_COLORS.rhythm.dark,
-    6: HERMETIC_COLORS.causeEffect.primary,
-    '6-light': HERMETIC_COLORS.causeEffect.secondary,
-    '6-dark': HERMETIC_COLORS.causeEffect.dark,
-    7: HERMETIC_COLORS.gender.primary,
-    '7-light': HERMETIC_COLORS.gender.secondary,
-    '7-dark': HERMETIC_COLORS.gender.dark,
+    1: "#E63946",           // Mentalism - Red
+    '1-light': "#FF6B75",
+    '1-dark': "#B82E38",
+    2: "#FF6B35",           // Correspondence - Orange
+    '2-light': "#FF9668",
+    '2-dark': "#CC5629",
+    3: "#FFD93D",           // Vibration - Yellow/Gold
+    '3-light': "#FFEB8C",
+    '3-dark': "#CCAE31",
+    4: "#10B981",           // Polarity - Green
+    '4-light': "#34D399",
+    '4-dark': "#059669",
+    5: "#2563EB",           // Rhythm - Deep Blue (updated)
+    '5-light': "#3B82F6",
+    '5-dark': "#1E40AF",
+    6: "#9D4EDD",           // Cause & Effect - Purple
+    '6-light': "#C18EED",
+    '6-dark': "#7E3EB1",
+    7: "#E9D5FF",           // Gender - Light Purple/Almost White (updated)
+    '7-light': "#F3E8FF",
+    '7-dark': "#C084FC",
   }
 };
 
@@ -314,12 +314,12 @@ export const TAILWIND_COLORS = {
  * Export shadow configurations for Tailwind
  */
 export const TAILWIND_SHADOWS = {
-  'realm-1': `0 4px 12px ${HERMETIC_COLORS.mentalism.glow}`,
-  'realm-2': `0 4px 12px ${HERMETIC_COLORS.correspondence.glow}`,
-  'realm-3': `0 4px 12px ${HERMETIC_COLORS.vibration.glow}`,
-  'realm-4': `0 4px 12px ${HERMETIC_COLORS.polarity.glow}`,
-  'realm-5': `0 4px 12px ${HERMETIC_COLORS.rhythm.glow}`,
-  'realm-6': `0 4px 12px ${HERMETIC_COLORS.causeEffect.glow}`,
-  'realm-7': `0 4px 12px ${HERMETIC_COLORS.gender.glow}`,
+  'realm-1': `0 4px 12px rgba(230, 57, 70, 0.3)`,      // Mentalism
+  'realm-2': `0 4px 12px rgba(255, 107, 53, 0.3)`,     // Correspondence
+  'realm-3': `0 4px 12px rgba(255, 217, 61, 0.3)`,     // Vibration
+  'realm-4': `0 4px 12px rgba(16, 185, 129, 0.3)`,     // Polarity
+  'realm-5': `0 4px 12px rgba(37, 99, 235, 0.3)`,      // Rhythm (updated)
+  'realm-6': `0 4px 12px rgba(157, 78, 221, 0.3)`,     // Cause & Effect
+  'realm-7': `0 4px 12px rgba(192, 132, 252, 0.4)`,    // Gender (using dark color for shadow)
   'gold': `0 4px 12px rgba(212, 175, 55, 0.3)`,
 };
