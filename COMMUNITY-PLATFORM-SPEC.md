@@ -16,6 +16,144 @@
 
 ---
 
+## 🎮 Principle-Specific Voting System
+
+**Innovative Feature**: Instead of generic upvote/downvote, users vote on **which specific principles** the analysis demonstrates well.
+
+### How It Works
+
+**On Each Analysis/Comment, Users See 7 Principle Voting Buttons:**
+
+```
+Did this demonstrate:
+🧠 Mentalism well?        ↑ 234  ↓ 12
+🔄 Correspondence well?   ↑ 189  ↓ 8
+⚡ Vibration well?        ↑ 267  ↓ 15
+⚖️ Polarity well?         ↑ 201  ↓ 22
+🌊 Rhythm well?           ↑ 145  ↓ 31
+🎯 Cause & Effect well?   ↑ 312  ↓ 7
+⚥ Gender well?           ↑ 178  ↓ 19
+```
+
+**Users can upvote/downvote EACH principle independently:**
+- ✅ Upvote Mentalism (great explanation!)
+- ✅ Upvote Cause & Effect (nailed the causation chain!)
+- ❌ Downvote Gender (weak Gender principle application)
+- 🤷 Don't vote on others (neutral/unsure)
+
+### Why This Is Genius
+
+**1. Educational Gamification**
+- Forces readers to actually understand each principle
+- "Did they demonstrate Correspondence well?" requires knowing what Correspondence IS
+- Learning becomes active (evaluate) not passive (consume)
+
+**2. Granular Feedback**
+- Authors learn: "I'm strong at Mentalism, weak at Gender"
+- Community curates: "This analysis excels at Polarity specifically"
+- Trends emerge: "Trump decodes always rate high on Cause & Effect"
+
+**3. Skill Progression Tracking**
+- User profiles show principle-specific karma:
+  - "Mentalism Master: 2,456 upvotes"
+  - "Struggling with Rhythm: 234 upvotes"
+- Encourages users to study principles they're weak at
+- Creates specialization: "Go to Jane for Polarity analyses"
+
+**4. Discovery & Filtering**
+- "Show me the best Correspondence analyses"
+- "What's trending in Rhythm this week?"
+- "Find analyses where Vibration + Mentalism both score high"
+- Enables principle-specific browsing
+
+**5. Competitive Learning**
+- Leaderboards per principle
+- Badges: "Correspondence Grandmaster" (10K+ principle upvotes)
+- Monthly challenges: "Best Gender principle application this month"
+- Drives engagement through friendly competition
+
+**6. Quality Curation at Scale**
+- Generic upvotes = popularity contest
+- Principle-specific votes = expertise curation
+- An analysis can be popular (high views) but poorly demonstrate principles (low principle votes)
+- Separates entertainment from education
+
+### Implementation Details
+
+**Vote Weighting:**
+```typescript
+totalScore = sum of all principle upvotes - sum of all principle downvotes
+
+// Example:
+Analysis scores:
+- Mentalism: +234, -12 = 222
+- Correspondence: +189, -8 = 181
+- Vibration: +267, -15 = 252
+...
+Total Score = 222 + 181 + 252 + ... = 1,547
+```
+
+**User Karma Calculation:**
+```typescript
+userKarma = {
+  total: sum of all principle upvotes received across all content,
+  byPrinciple: {
+    mentalism: total mentalism upvotes received,
+    correspondence: total correspondence upvotes received,
+    // ... etc
+  },
+  specializations: principles where user has 3x more upvotes than average
+}
+```
+
+**Sorting Algorithms:**
+- **Hot**: Principle votes weighted by recency
+- **Top**: Highest principle vote total in timeframe
+- **Controversial**: High principle upvotes + high principle downvotes
+- **Principle-Specific**: Filter by specific principle scores
+
+### UI/UX Design
+
+**Compact View (Analysis List):**
+```
+🧠 234  🔄 189  ⚡ 267  ⚖️ 201  🌊 145  🎯 312  ⚥ 178
+```
+
+**Expanded View (Individual Analysis):**
+```
+Rate this analysis on how well it demonstrates each principle:
+
+🧠 Mentalism               [↑ 234] [↓ 12]  88% approval
+🔄 Correspondence          [↑ 189] [↓ 8]   96% approval
+⚡ Vibration               [↑ 267] [↓ 15]  94% approval
+⚖️ Polarity                [↑ 201] [↓ 22]  90% approval
+🌊 Rhythm                  [↑ 145] [↓ 31]  82% approval
+🎯 Cause & Effect          [↑ 312] [↓ 7]   98% approval ⭐ STRONGEST
+⚥ Gender                  [↑ 178] [↓ 19]  90% approval
+
+Your votes: [Mentalism ↑] [Cause & Effect ↑] [Not rated: 5 principles]
+```
+
+### Permissions
+
+**Everyone Can:**
+- ✅ Read all analyses and comments
+- ✅ Vote on principles (requires account)
+- ✅ Comment on any analysis (requires account)
+- ✅ Reply to comments (nested threads)
+
+**Account Required For:**
+- Voting (prevents spam)
+- Commenting (prevents spam)
+- Submitting analyses
+
+**No Account Required For:**
+- Reading everything
+- Sharing links
+- Browsing community
+
+---
+
 ## 🗺️ URL Structure
 
 ```
@@ -55,15 +193,27 @@ interface Analysis {
   insight: string; // Key takeaway
   application: string; // How to apply this in your life
 
-  // Community
-  upvotes: number;
-  downvotes: number;
-  score: number; // upvotes - downvotes
+  // Principle-Specific Voting (NEW - Gamifies learning!)
+  principleVotes: {
+    mentalism: { up: number; down: number; };
+    correspondence: { up: number; down: number; };
+    vibration: { up: number; down: number; };
+    polarity: { up: number; down: number; };
+    rhythm: { up: number; down: number; };
+    causeEffect: { up: number; down: number; };
+    gender: { up: number; down: number; };
+  };
+
+  // Overall Community Engagement
+  totalUpvotes: number; // Sum of all principle upvotes
+  totalDownvotes: number; // Sum of all principle downvotes
+  score: number; // totalUpvotes - totalDownvotes
   helpfulCount: number; // "This helped me understand [principle]" clicks
   commentCount: number;
 
   // Meta
   featured: boolean; // Expert analysis
+  commentsOpen: boolean; // Default: true (anyone can comment)
   createdAt: Date;
   updatedAt: Date;
 
@@ -83,13 +233,35 @@ interface Comment {
     id: string;
     username: string;
     karma: number;
+    expertBadge?: boolean;
   };
   content: string; // Markdown
-  upvotes: number;
-  downvotes: number;
+
+  // Principle-Specific Voting (NEW - High Value Feature!)
+  principleVotes: {
+    mentalism: { up: number; down: number; };
+    correspondence: { up: number; down: number; };
+    vibration: { up: number; down: number; };
+    polarity: { up: number; down: number; };
+    rhythm: { up: number; down: number; };
+    causeEffect: { up: number; down: number; };
+    gender: { up: number; down: number; };
+  };
+
+  // Overall voting (sum of principle votes)
+  totalUpvotes: number;
+  totalDownvotes: number;
   score: number;
+
+  // Meta
   createdAt: Date;
+  updatedAt: Date;
   parentCommentId?: string; // For nested replies
+  isExpertComment: boolean; // Highlighted if from expert
+
+  // Moderation
+  reported: boolean;
+  reportCount: number;
 }
 ```
 
