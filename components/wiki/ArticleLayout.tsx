@@ -30,15 +30,15 @@ export function ArticleLayout({ article, tableOfContents, relatedArticles }: Art
               {/* Breadcrumbs */}
               <nav className="mb-8 text-sm flex items-center">
                 <Link href="/wiki" className="text-gray-400 hover:text-gold-divine transition-colors">
-                  Wiki
+                  The Codex
                 </Link>
                 <span className="text-gray-600 mx-2">/</span>
                 <span className="text-gray-300">{article.title}</span>
               </nav>
 
               {/* Article Header */}
-              <header className="mb-12">
-                <h1 className="text-4xl md:text-4xl font-bold mb-6 text-white">
+              <header className="mb-12 pb-6 border-b border-gray-800">
+                <h1 className="text-4xl md:text-4xl font-bold mb-6 text-gray-100">
                   {article.title}
                 </h1>
 
@@ -71,27 +71,27 @@ export function ArticleLayout({ article, tableOfContents, relatedArticles }: Art
                 </div>
               </header>
 
-              {/* Article Body - Styled Markdown */}
+              {/* Article Body - Styled Markdown with improved readability */}
               <div
                 className="prose prose-invert prose-lg max-w-none
+                  space-y-8
                   prose-headings:font-bold
-                  prose-headings:text-white
-                  prose-h1:text-3xl prose-h1:mt-12 prose-h1:mb-6
-                  prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-5
-                  prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4
-                  prose-h4:text-lg prose-h4:mt-6 prose-h4:mb-3
-                  prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-4
-                  prose-a:text-gold-divine prose-a:no-underline hover:prose-a:underline
-                  prose-strong:text-white prose-strong:font-semibold
-                  prose-code:text-gold-radiant prose-code:bg-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
+                  prose-h1:text-3xl prose-h1:text-gray-100 prose-h1:mt-12 prose-h1:mb-6 prose-h1:border-b prose-h1:border-gray-800 prose-h1:pb-4
+                  prose-h2:text-2xl prose-h2:text-gray-200 prose-h2:mt-10 prose-h2:mb-5 prose-h2:font-semibold
+                  prose-h3:text-xl prose-h3:text-gray-300 prose-h3:mt-8 prose-h3:mb-4 prose-h3:font-medium
+                  prose-h4:text-lg prose-h4:text-gray-400 prose-h4:mt-6 prose-h4:mb-3
+                  prose-p:text-gray-400 prose-p:leading-relaxed prose-p:mb-6
+                  prose-a:text-cosmic-purple prose-a:no-underline hover:prose-a:text-cosmic-gold hover:prose-a:underline
+                  prose-strong:text-gray-200 prose-strong:font-semibold
+                  prose-code:text-cosmic-gold prose-code:bg-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
                   prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-800 prose-pre:rounded-lg
-                  prose-blockquote:border-l-4 prose-blockquote:border-gold-divine prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-400
-                  prose-ul:list-disc prose-ul:ml-5 prose-ul:text-gray-300 prose-ul:my-4
-                  prose-ol:list-decimal prose-ol:ml-5 prose-ol:text-gray-300 prose-ol:my-4
-                  prose-li:mb-2 prose-li:text-gray-300
+                  prose-blockquote:border-l-4 prose-blockquote:border-cosmic-purple prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-400 prose-blockquote:my-6
+                  prose-ul:list-disc prose-ul:ml-6 prose-ul:text-gray-400 prose-ul:my-6 prose-ul:space-y-2
+                  prose-ol:list-decimal prose-ol:ml-6 prose-ol:text-gray-400 prose-ol:my-6 prose-ol:space-y-2
+                  prose-li:mb-2 prose-li:text-gray-400 prose-li:leading-relaxed
                   prose-table:border-collapse prose-table:w-full prose-table:my-6
-                  prose-th:border prose-th:border-gray-700 prose-th:bg-gray-900 prose-th:p-3 prose-th:text-left prose-th:font-semibold
-                  prose-td:border prose-td:border-gray-700 prose-td:p-3 prose-td:text-gray-300
+                  prose-th:border prose-th:border-gray-700 prose-th:bg-gray-900 prose-th:p-3 prose-th:text-left prose-th:font-semibold prose-th:text-gray-200
+                  prose-td:border prose-td:border-gray-700 prose-td:p-3 prose-td:text-gray-400
                   prose-hr:border-gray-800 prose-hr:my-10
                 "
               >

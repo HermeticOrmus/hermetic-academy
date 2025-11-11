@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getPrincipleBySlug, getNextPrinciple, getPrevPrinciple } from "@/lib/constants";
 import { getCurrentUser, getUserProgress } from "@/lib/supabase";
 import { PrincipleHero } from "@/components/principles/PrincipleHero";
-import { PrincipleExperience } from "@/components/principles/PrincipleExperience";
+import { PrincipleContent } from "@/components/principles/PrincipleContent";
 import { PrincipleReflection } from "@/components/principles/PrincipleReflection";
 import { CommunityReflections } from "@/components/community/CommunityReflections";
 import { PrincipleNavigation } from "@/components/principles/PrincipleNavigation";
@@ -12,7 +12,7 @@ import { PrincipleNavigation } from "@/components/principles/PrincipleNavigation
  *
  * WHY: Each of the 7 principles needs its own page with:
  * - Hero section (title, description)
- * - Interactive experience (unique per principle)
+ * - Educational content (key concepts, examples, reflections)
  * - Personal reflection area
  * - Community wisdom sharing
  * - Navigation to prev/next principle
@@ -54,8 +54,8 @@ export default async function PrinciplePage({ params }: PrinciplePageProps) {
       {/* Hero Section - Principle introduction */}
       <PrincipleHero principle={principle} isCompleted={isCompleted} />
 
-      {/* Interactive Experience - Unique per principle */}
-      <PrincipleExperience principle={principle} />
+      {/* Educational Content - Key concepts, examples, reflections */}
+      <PrincipleContent principle={principle} />
 
       {/* Personal Reflection - Save thoughts (auth required) */}
       <PrincipleReflection
@@ -108,10 +108,10 @@ export async function generateMetadata({ params }: PrinciplePageProps) {
 
   return {
     title: `${principle.title} - ${principle.subtitle} | Hermetic Academy`,
-    description: principle.teenTranslation,
+    description: `Learn the Hermetic Principle of ${principle.title}: ${principle.ancientTruth}`,
     openGraph: {
       title: `${principle.title}: ${principle.subtitle}`,
-      description: principle.teenTranslation,
+      description: `Learn the Hermetic Principle of ${principle.title}: ${principle.ancientTruth}`,
     },
   };
 }

@@ -13,7 +13,7 @@ export default function WikiHomepage() {
           {/* Header */}
           <header className="mb-12">
             <h1 className="text-4xl font-bold text-white mb-4">
-              Hermetic Philosophy Knowledge Base
+              The Codex
             </h1>
             <p className="text-lg text-gray-400 max-w-3xl">
               A comprehensive guide to the seven universal principles of Hermetic philosophy.
@@ -27,7 +27,7 @@ export default function WikiHomepage() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
               <input
                 type="text"
-                placeholder="Search the knowledge base..."
+                placeholder="Search the Codex..."
                 className="w-full pl-12 pr-4 py-3 bg-gray-900/50 border border-gray-800 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gold-divine/50 focus:ring-1 focus:ring-gold-divine/50"
                 disabled
               />
@@ -68,7 +68,7 @@ export default function WikiHomepage() {
               >
                 <h3 className="text-lg font-semibold text-white mb-2">Navigation Guide</h3>
                 <p className="text-sm text-gray-400 mb-4">
-                  Learn how to navigate this wiki and choose your learning path.
+                  Learn how to navigate the Codex and choose your learning path.
                 </p>
                 <span className="text-gold-divine text-sm font-medium">Get oriented →</span>
               </a>

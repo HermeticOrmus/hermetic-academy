@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: { slug: string[] } 
   }
 
   return {
-    title: `${article.title} | Hermetic Academy Wiki`,
+    title: `${article.title} | The Codex - Hermetic Academy`,
     description: article.content.substring(0, 160).replace(/#/g, '').trim(),
   };
 }
