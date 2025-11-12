@@ -1,0 +1,416 @@
+{
+  "lenses": [
+    {
+      "id": "universal",
+      "name": "Universal",
+      "emoji": "🌐",
+      "description": "Clear, precise, domain-neutral explanations",
+      "audience": "Everyone",
+      "tone": "Intellectual, accessible, grounded"
+    },
+    {
+      "id": "gamer",
+      "name": "Gamer",
+      "emoji": "🎮",
+      "description": "Gaming mechanics, esports strategy, competitive mindset",
+      "audience": "Gamers, streamers, esports enthusiasts",
+      "tone": "Strategic, competitive, optimization-focused"
+    },
+    {
+      "id": "business",
+      "name": "Business Pro",
+      "emoji": "💼",
+      "description": "Market dynamics, strategy, growth, execution",
+      "audience": "Entrepreneurs, professionals, career-focused",
+      "tone": "Results-oriented, strategic, growth-focused"
+    },
+    {
+      "id": "surfer",
+      "name": "Surfer",
+      "emoji": "🏄",
+      "description": "Wave reading, flow state, natural rhythms",
+      "audience": "Surfers, skaters, action sports",
+      "tone": "Chill, flow-focused, nature-connected"
+    },
+    {
+      "id": "engineer",
+      "name": "Engineer",
+      "emoji": "🔧",
+      "description": "Systems thinking, optimization, debugging",
+      "audience": "Engineers, developers, makers, tech enthusiasts",
+      "tone": "Logical, systematic, problem-solving"
+    },
+    {
+      "id": "nurse",
+      "name": "Healthcare",
+      "emoji": "🏥",
+      "description": "Patient care, assessment, holistic health",
+      "audience": "Nurses, healthcare workers, caregivers",
+      "tone": "Compassionate, observant, systems-aware"
+    },
+    {
+      "id": "developer",
+      "name": "Developer",
+      "emoji": "💻",
+      "description": "Code architecture, debugging, system design",
+      "audience": "Software developers, programmers, tech professionals",
+      "tone": "Analytical, systematic, efficiency-focused"
+    },
+    {
+      "id": "therapist",
+      "name": "Therapist",
+      "emoji": "🧠",
+      "description": "Mental frameworks, behavior patterns, healing",
+      "audience": "Therapists, counselors, mental health professionals",
+      "tone": "Empathetic, insightful, pattern-recognizing"
+    },
+    {
+      "id": "chef",
+      "name": "Chef",
+      "emoji": "👨‍🍳",
+      "description": "Technique, timing, balance, creativity",
+      "audience": "Cooks, bakers, food enthusiasts",
+      "tone": "Creative, sensory, process-oriented"
+    },
+    {
+      "id": "fitness",
+      "name": "Athlete",
+      "emoji": "💪",
+      "description": "Training, performance, recovery, discipline",
+      "audience": "Athletes, fitness enthusiasts, competitors",
+      "tone": "Disciplined, performance-driven, goal-focused"
+    },
+    {
+      "id": "gardener",
+      "name": "Gardener",
+      "emoji": "🌱",
+      "description": "Growth cycles, ecosystems, patience, cultivation",
+      "audience": "Gardeners, plant enthusiasts, nature lovers",
+      "tone": "Patient, observant, cycle-aware"
+    }
+  ],
+  "principles": {
+    "mentalism": {
+      "universal": {
+        "teenTranslation": "Your mental framework determines what you notice and how you interpret events. Change your lens, change your experience.",
+        "description": "Your brain filters reality through expectations. Anxious? You notice threats. Curious? You spot opportunities. Same event, different mental filter = different experience. Psychology, not magic."
+      },
+      "gamer": {
+        "teenTranslation": "Your mental game determines your rank. Tilt = lose. Focus = win. Same in League, same IRL.",
+        "description": "Your mindset is your build. Go into any ranked match tilted and you're hardstuck. Same with life—your mental determines what reality raid boss you're facing. Not magic. Just how the game works."
+      },
+      "business": {
+        "teenTranslation": "Your business mindset determines what opportunities you see and what risks you take. Scarcity thinking limits growth.",
+        "description": "Market perception is mental construction. Two entrepreneurs see the same market—one sees saturated competition, another sees underserved niches. Your mental framework determines which signals you process and what strategies emerge."
+      },
+      "surfer": {
+        "teenTranslation": "Your headspace determines which waves you see and commit to. Fear filters out opportunity. Confidence opens vision.",
+        "description": "Same ocean, different mental state = different session. Anxious mind sees every wave as closeout. Confident mind sees barrels everywhere. Your mental filter shapes the water you experience."
+      },
+      "engineer": {
+        "teenTranslation": "Your mental model is your system architecture. It determines what inputs you process and what solutions you generate.",
+        "description": "Your brain is the compiler. Your beliefs are the code. Optimistic compilation sees possibilities. Pessimistic compilation throws errors everywhere. Same data, different mental processing = different output."
+      },
+      "nurse": {
+        "teenTranslation": "Your clinical mindset determines what you observe in patients. Rushed? You miss subtle signs. Present? You catch early warnings.",
+        "description": "Same patient, different mental framework = different assessment. Experienced nurses don't just see more—they filter differently. Your mental model determines which vital patterns register as significant versus noise."
+      },
+      "developer": {
+        "teenTranslation": "Your mental model determines how you approach problems. See bugs as failures or learning opportunities. Different mindset, different code quality.",
+        "description": "Your mental framework is your debugging strategy. Fixed mindset sees every error as proof of incompetence. Growth mindset sees every error as data. Same bug, different mental processing = different solutions."
+      },
+      "therapist": {
+        "teenTranslation": "Client reality is mental construction. Two people experience same event—one develops PTSD, another finds meaning. Mental framework determines outcome.",
+        "description": "Your mind doesn't passively receive reality—it actively constructs experience through interpretation. Same childhood, different meaning-making framework = different adult mental health. Therapy changes the mental lens, not the past."
+      },
+      "chef": {
+        "teenTranslation": "Your culinary mindset determines what you taste and create. Rushed? You miss subtle flavors. Present? You catch every note.",
+        "description": "Same ingredients, different mental approach = different dish. Anxious cook tastes only what's wrong. Confident cook builds on what's working. Your mental state shapes the flavors you perceive and create."
+      },
+      "fitness": {
+        "teenTranslation": "Your training mindset determines your results. 'I can't' becomes self-fulfilling prophecy. 'Not yet' creates progress path.",
+        "description": "Mental game is 80% of performance. Same workout, different mindset = different gains. Fixed mindset hits ceiling. Growth mindset breaks through. Your mental framework determines what your body attempts."
+      },
+      "gardener": {
+        "teenTranslation": "Your gardening philosophy determines what you see in your plants. Impatient? Everything's too slow. Patient? Every stage has beauty.",
+        "description": "Same garden, different mental lens = different experience. Anxious gardener sees only pests and problems. Observant gardener sees ecosystem balance. Your mental framework determines which plant signals you notice and how you respond."
+      }
+    },
+    "correspondence": {
+      "universal": {
+        "teenTranslation": "Patterns repeat at different scales. How you organize your desk mirrors how you organize your life. Same structure, different size.",
+        "description": "How you handle small things mirrors how you handle big things. Same patterns at different scales. Fractals prove this mathematically—one equation describes trees, rivers, lungs, galaxies."
+      },
+      "gamer": {
+        "teenTranslation": "Same mechanics everywhere. Lane phase mirrors teamfight. Your jungle pathing reflects your life strategy. Patterns stack.",
+        "description": "Every system uses the same mechanics at different scales. How you cs in lane = how you handle IRL goals. Team coordination in WoW raids = how you coordinate projects. Master one level, understand all levels."
+      },
+      "business": {
+        "teenTranslation": "Small business patterns mirror enterprise patterns. How you handle $100 decisions mirrors how you'll handle $100K decisions.",
+        "description": "Company culture at 5 people predicts culture at 500. How founders handle early customer complaints mirrors how corporation handles PR crises. Patterns established early replicate at scale. Fix patterns small, or fight them forever large."
+      },
+      "surfer": {
+        "teenTranslation": "How you read small ripples mirrors how you read big swells. Ocean patterns repeat at all scales—wavelets to tsunami.",
+        "description": "Same wave physics from ankle-slappers to big-wave bombs. How you position for shore break mirrors how you position for outer reef. Reading wind chop teaches you to read Pacific storms. Patterns repeat across scales."
+      },
+      "engineer": {
+        "teenTranslation": "System architecture patterns repeat from circuits to cities. Same design principles, different scale. Learn one, recognize all.",
+        "description": "Feedback loops in thermostats mirror feedback loops in economies. Load balancing in servers mirrors traffic flow in highways. Fractal architecture—same structural patterns from microchips to metropolitan grids."
+      },
+      "nurse": {
+        "teenTranslation": "Body systems mirror each other. Circulatory patterns repeat in lymphatic. Cell behavior mirrors organ behavior mirrors body behavior.",
+        "description": "How individual cells respond to stress mirrors how organs respond mirrors how whole body responds. Inflammation at cellular level corresponds to inflammation at systemic level. Treat pattern at any scale, affect pattern at all scales."
+      },
+      "developer": {
+        "teenTranslation": "Code patterns repeat across scales. Function structure mirrors class structure mirrors application architecture. Same principles, different scope.",
+        "description": "How you name variables mirrors how you structure databases. Your git commit style mirrors your project organization style. Messy function = messy class = messy codebase. Patterns established in small code replicate in large systems."
+      },
+      "therapist": {
+        "teenTranslation": "Family patterns repeat in relationships. How parents related mirrors how you relate. Childhood dynamics correspond to adult dynamics.",
+        "description": "Attachment patterns formed in infancy mirror relationship patterns in adulthood. Family system dynamics correspond to workplace dynamics. Internal relationship with self mirrors external relationships with others. Patterns at one level reflect patterns at all levels."
+      },
+      "chef": {
+        "teenTranslation": "How you prep ingredients mirrors your entire cooking style. Knife skills correspond to plate composition. Small techniques reveal whole philosophy.",
+        "description": "Your mise en place organization mirrors your menu organization. How you balance flavors in a sauce corresponds to how you balance courses in a meal. Kitchen workflow patterns repeat from station to service to restaurant operations."
+      },
+      "fitness": {
+        "teenTranslation": "How you warm up mirrors how you train mirrors how you live. Small movement patterns reveal big physical patterns.",
+        "description": "Your single-rep form corresponds to your set quality corresponds to your program design. How you approach one workout mirrors how you approach entire training cycle. Body mechanics at micro level mirror performance at macro level."
+      },
+      "gardener": {
+        "teenTranslation": "Root health mirrors plant health mirrors garden health. Patterns in one plant correspond to patterns in whole ecosystem.",
+        "description": "How you treat soil mirrors how garden performs. Individual plant health corresponds to bed health corresponds to total garden ecosystem. Nutrient cycles at root level mirror nutrient cycles at garden level. Same patterns, different scales."
+      }
+    },
+    "vibration": {
+      "universal": {
+        "teenTranslation": "Nothing is static. Your mood shifts, markets fluctuate, energy cycles between states. Recognizing state changes gives you leverage.",
+        "description": "Nothing stays still. Your mood shifts, markets cycle, atoms literally vibrate. Recognizing these state changes lets you work with momentum instead of fighting it. Physics + psychology, not magic."
+      },
+      "gamer": {
+        "teenTranslation": "Energy is momentum. High energy = aggressive plays. Low energy = defensive rotations. You control the tempo.",
+        "description": "Everything has momentum and frequency. Aggressive playstyle vs defensive playstyle—same game, different frequency. Tilt is low-frequency chaos. Flow state is high-frequency clarity. You shift the vibe, you shift the game."
+      },
+      "business": {
+        "teenTranslation": "Markets vibrate between fear and greed. Company energy oscillates. Read the frequency, time your moves.",
+        "description": "Market sentiment isn't static—it oscillates between euphoria and panic. Company culture has vibration (high-energy startup vs low-energy bureaucracy). Your business energy attracts matching frequency customers. Match market vibration or get left behind."
+      },
+      "surfer": {
+        "teenTranslation": "Ocean is pure vibration. Swell period, wave frequency, your own energy state—all oscillating. Match the frequency, find the flow.",
+        "description": "Every wave is literally vibration traveling through water. Swell period determines ride quality. Your body's energy state determines which waves you catch. Low-vibe session attracts choppy conditions. High-vibe session finds glass."
+      },
+      "engineer": {
+        "teenTranslation": "Everything oscillates. Electrical signals, mechanical resonance, system load. Frequency mismatch = failure. Resonance = optimization.",
+        "description": "Systems vibrate at natural frequencies. Push wrong frequency, create destructive interference. Match resonant frequency, amplify performance. From bridge engineering to circuit design—understand vibration or face catastrophic failure."
+      },
+      "nurse": {
+        "teenTranslation": "Patients vibrate at different energy states. Vitals oscillate. Your own energy affects patient outcomes. Maintain high-frequency presence.",
+        "description": "Heart rate variability is literal vibration measurement. Patient energy states shift throughout day. Your calm presence raises their frequency. Your stress lowers it. Healthcare is energy work whether you call it that or not."
+      },
+      "developer": {
+        "teenTranslation": "Code has rhythm and frequency. Fast iteration vs slow deliberation. System load oscillates. Match development tempo to project needs.",
+        "description": "Development velocity vibrates—sprints create oscillation between intense coding and recovery. Server load fluctuates in waves. Your mental frequency determines code quality. Rushed frequency creates bugs. Flow frequency creates elegant solutions."
+      },
+      "therapist": {
+        "teenTranslation": "Emotional states vibrate at different frequencies. Depression is low-frequency stuck state. Anxiety is high-frequency chaos. Therapy helps regulate vibration.",
+        "description": "Mental states are literally different brainwave frequencies. Depression = low-frequency rumination loop. Anxiety = high-frequency worry oscillation. Therapy shifts stuck frequencies. Medication dampens extreme oscillations. Balance is sustainable vibration."
+      },
+      "chef": {
+        "teenTranslation": "Kitchen energy vibrates. Calm service vs chaotic rush. Your frequency sets the whole team's tempo. Control the vibe.",
+        "description": "Kitchen operates at different frequencies—slow prep vs intense service. Your energy as chef vibrates through entire brigade. Frantic frequency creates mistakes. Focused intensity creates precision. Kitchen vibe is literal energy management."
+      },
+      "fitness": {
+        "teenTranslation": "Your body vibrates at different energy states. CNS fatigue vs peak readiness. Training frequency determines adaptation.",
+        "description": "Muscle contraction is vibration. Heart rate is oscillation. Training intensity creates different frequency states. Overtrain = stuck in low-frequency recovery debt. Undertrain = never reach high-frequency performance. Find sustainable vibration."
+      },
+      "gardener": {
+        "teenTranslation": "Garden energy shifts with seasons. Spring high-frequency growth. Winter low-frequency dormancy. Work with natural vibration, not against it.",
+        "description": "Plants vibrate at different metabolic frequencies. Active growth is high-frequency state. Dormancy is low-frequency conservation. Water and nutrients are energy that raises plant vibration. Garden thrives when you match its natural frequency cycles."
+      }
+    },
+    "polarity": {
+      "universal": {
+        "teenTranslation": "Hot and cold are the same thing (temperature) at different intensities. Opposites are degrees on a spectrum, not separate categories.",
+        "description": "Hot and cold aren't opposites—they're the same thing (temperature) at different levels. Same with emotions, behaviors, traits. Understanding this spectrum makes you adaptable. You can shift."
+      },
+      "gamer": {
+        "teenTranslation": "Aggro and passive are the same stat (risk). Win streaks and lose streaks both teach. Every strength has a counter.",
+        "description": "Opposites are just different settings on the same slider. Full tank build vs full damage—both extremes on the survivability spectrum. Understanding both makes you adaptable. Best players slide between poles mid-match."
+      },
+      "business": {
+        "teenTranslation": "Competition and collaboration are same spectrum. Scaling up and staying small both have costs. Choose your pole consciously.",
+        "description": "Growth vs profitability aren't opposites—they're poles on value creation spectrum. Innovation vs execution, risk vs safety, fast vs quality. Best businesses don't choose one—they shift between poles based on context."
+      },
+      "surfer": {
+        "teenTranslation": "Onshore and offshore are same wind, different direction. Small and big waves both teach. Aggressive and mellow both have place.",
+        "description": "Every condition has its opposite but they're same spectrum. Glassy vs choppy, high tide vs low, fast vs slow sections—all degrees on wave quality spectrum. Best surfers work the full range, not stuck at one pole."
+      },
+      "engineer": {
+        "teenTranslation": "Optimization and simplicity are same spectrum. Fast and reliable, cheap and quality—choose where on spectrum, not one vs other.",
+        "description": "Engineering tradeoffs are polar spectrums. Speed vs accuracy, centralized vs distributed, coupled vs modular. No right answer—just conscious choice of where on spectrum based on constraints. Master the spectrum, not just the extremes."
+      },
+      "nurse": {
+        "teenTranslation": "Sympathetic and parasympathetic are same nervous system, opposite modes. Illness and wellness are spectrum, not binary.",
+        "description": "Fight-or-flight vs rest-and-digest aren't separate systems—they're poles of autonomic balance. Health isn't binary (sick vs well)—it's spectrum. Pain and pleasure are same neural pathways at different intensities. Medicine shifts poles."
+      },
+      "developer": {
+        "teenTranslation": "Coupling and modularity are same architectural spectrum. Verbose and concise code—both have costs. Choose your tradeoff consciously.",
+        "description": "Code opposites are spectrum choices. Static vs dynamic typing, monolith vs microservices, waterfall vs agile. No universal right answer—context determines optimal pole. Best developers shift along spectrum based on project needs."
+      },
+      "therapist": {
+        "teenTranslation": "Love and hate are same emotional intensity, different direction. Boundaries and connection aren't opposites—they enable each other.",
+        "description": "Psychological opposites are intensity spectrum. Attachment and detachment, expression and suppression, trust and suspicion—all poles requiring balance. Stuck at either extreme creates pathology. Therapy helps navigate spectrum fluidly."
+      },
+      "chef": {
+        "teenTranslation": "Sweet and savory are same flavor intensity spectrum. Simple and complex dishes both have place. Balance the poles.",
+        "description": "Flavor opposites are complementary poles. Acid and fat, bitter and sweet, heat and cool—all spectrum balances. Amateur cooks fear one pole. Master chefs dance between extremes, knowing when to push which direction."
+      },
+      "fitness": {
+        "teenTranslation": "Strength and endurance are same adaptation spectrum. Rest and work aren't opposites—they create each other. Balance poles for gains.",
+        "description": "Training opposites are same physiological spectrum. Power vs endurance, intensity vs volume, work vs recovery. Stuck at one pole creates imbalance. Best athletes consciously shift between poles based on training phase and goals."
+      },
+      "gardener": {
+        "teenTranslation": "Wet and dry are same water spectrum. Sun and shade both necessary. Every plant needs different pole balance.",
+        "description": "Gardening opposites are environmental spectrums. Nitrogen vs phosphorus, acid vs alkaline soil, pruning vs letting grow. No universal right pole—different plants need different spectrum positions. Master gardeners adjust poles per plant needs."
+      }
+    },
+    "rhythm": {
+      "universal": {
+        "teenTranslation": "Everything moves in cycles. Day/night, seasons, your energy, attention span. Fighting natural rhythms burns you out. Working with them creates flow.",
+        "description": "Everything cycles: day/night, seasons, your energy (90-min focus periods), markets. Your biology has built-in rhythms. Fighting them wastes energy. Working with them multiplies output. Science."
+      },
+      "gamer": {
+        "teenTranslation": "Can't grind 24/7. Burnout kills your rank harder than one bad game. Clean rotation = peak + rest. Pros know this.",
+        "description": "Everything runs in cycles—win streaks and lose streaks, grind sessions and cooldowns, meta shifts and off-meta. Fighting the rhythm burns you out. Working with it keeps you climbing. Even Faker takes breaks. This is law."
+      },
+      "business": {
+        "teenTranslation": "Markets cycle. Customer demand oscillates. Your energy has peaks. Build business rhythm around natural cycles, not against them.",
+        "description": "Business operates in rhythms—sales cycles, market cycles, product lifecycles, team energy cycles. Fight the rhythm (constant hustle) = burnout and diminishing returns. Work with rhythm (strategic intensity + recovery) = sustainable growth."
+      },
+      "surfer": {
+        "teenTranslation": "Tides cycle. Swells come in sets. Your energy needs rest between sessions. Best surfers sync with ocean's rhythm.",
+        "description": "Ocean is pure rhythm—swell periods, tide cycles, seasonal patterns, set waves. Paddle for every wave = exhaustion. Wait for sets, rest between = multiple hours in water. Surfing is rhythm reading mastery."
+      },
+      "engineer": {
+        "teenTranslation": "Systems have load cycles. Development has iteration rhythms. Forcing constant output degrades quality. Build in recovery periods.",
+        "description": "All systems exhibit rhythmic behavior—CPU cycles, network traffic patterns, user activity waves. Over-optimize for peak load = expensive waste during troughs. Design for rhythm = efficient resource utilization and system longevity."
+      },
+      "nurse": {
+        "teenTranslation": "Body has circadian rhythms. Patient needs cycle throughout shift. Your energy must match 12-hour rhythm. Pace yourself.",
+        "description": "Healthcare runs on biological rhythms—circadian cycles affect everything from pain tolerance to medication efficacy. Patient energy peaks and crashes throughout day. Ignore rhythm = exhausted by hour 8. Honor rhythm = sustainable care delivery."
+      },
+      "developer": {
+        "teenTranslation": "Code quality cycles with energy. Sprint rhythms need recovery. Deploy schedules have patterns. Work with development rhythm.",
+        "description": "Development exhibits natural rhythms—productive morning hours, afternoon slumps, sprint intensity followed by planning lulls. Force consistent output = technical debt accumulation. Honor rhythm = sustainable velocity and code quality."
+      },
+      "therapist": {
+        "teenTranslation": "Healing happens in cycles, not linear progress. Client energy oscillates. Breakthroughs come after integration periods. Trust the rhythm.",
+        "description": "Mental health recovery follows rhythmic patterns—progress, plateau, regression, breakthrough. Fight the cycle (expect linear improvement) = frustration. Trust rhythm (healing happens in waves) = sustainable therapeutic relationship and real change."
+      },
+      "chef": {
+        "teenTranslation": "Kitchen has daily rhythm. Prep → service → cleanup. Seasonal ingredients cycle. Your energy must match kitchen's tempo.",
+        "description": "Restaurant operates on multiple rhythms—daily service cycles, weekly prep patterns, seasonal menu changes. Fight rhythm (same intensity all day) = burnout. Match rhythm (calm prep, intense service, recovery cleanup) = kitchen longevity."
+      },
+      "fitness": {
+        "teenTranslation": "Training needs periodization. Hard days and easy days. Work and recovery cycles. Ignore rhythm = plateau or injury.",
+        "description": "Body adapts through rhythmic stress and recovery. Hard training breaks down tissue. Rest builds it back stronger. No rhythm (constant intensity) = overtraining. Honor rhythm (strategic periodization) = continuous adaptation and gains."
+      },
+      "gardener": {
+        "teenTranslation": "Plants have growth seasons. Garden cycles through bloom times. Work with nature's rhythm, not your impatience.",
+        "description": "Garden is pure rhythm—germination, growth, flowering, dormancy. Each plant has cycle timing. Force growth outside rhythm (wrong season) = failure. Align with rhythm (plant in season, harvest at peak) = abundant garden."
+      }
+    },
+    "cause-effect": {
+      "universal": {
+        "teenTranslation": "Every action creates ripples. Small choices compound over time. Understanding cause-effect chains gives you predictive power.",
+        "description": "Actions chain into consequences. Skip breakfast → low focus → missed deadline → stress → poor sleep. Small causes compound into big effects. Understanding chains gives you control, not just reaction."
+      },
+      "gamer": {
+        "teenTranslation": "Every input creates an output. One bad positioning = lost teamfight = lost game. Chain reactions. Nothing is RNG except the loot table.",
+        "description": "Every action chains into consequences. Miss one cs, lose lane pressure, lose tower, lose map control. Or: ward river, spot jungler, ping team, win fight. Mastering cause-effect means you control the game instead of reacting to it."
+      },
+      "business": {
+        "teenTranslation": "Small decisions compound into outcomes. One unhappy customer creates review cascade. One quality compromise destroys brand trust.",
+        "description": "Business is causation chains. Cut quality to save costs → customer notices → bad reviews → lost trust → declining sales → desperation pricing → death spiral. Or reverse: Delight customer → referral → growth → resources → better quality → more delight. Choose your chain."
+      },
+      "surfer": {
+        "teenTranslation": "Your paddle timing causes your wave position causes your ride quality. Everything chains. Miss the cause, deal with effects.",
+        "description": "Every choice creates cascade. Late paddle → wrong position → bad drop → blown wave. Or: Read swell, position early, commit hard, make section, ride of the day. Surfing is reading cause-effect chains in real-time."
+      },
+      "engineer": {
+        "teenTranslation": "Every design choice cascades through system. One bottleneck causes downstream failures. Root cause determines all effects.",
+        "description": "Systems are causation networks. Database design choice → query performance → API latency → user experience → business metrics. Every technical decision chains into consequences. Senior engineers trace cause-effect backwards to find root issues."
+      },
+      "nurse": {
+        "teenTranslation": "One missed vital sign can cascade into crisis. Early intervention changes whole outcome chain. Small observations have big consequences.",
+        "description": "Healthcare is cause-effect chain management. Elevated temp → infection possibility → early antibiotics → prevented sepsis. Or missed: subtle change → delayed intervention → cascade to ICU. Clinical judgment is recognizing cause before effects compound."
+      },
+      "developer": {
+        "teenTranslation": "One bug in core function cascades through codebase. Tech debt compounds. Every shortcut has downstream cost.",
+        "description": "Code is pure causation. Skip tests → bugs ship → user complaints → emergency patches → more bugs → death march. Or: Write tests, catch early, ship clean, user trust, sustainable velocity. Every coding choice starts a chain—choose wisely."
+      },
+      "therapist": {
+        "teenTranslation": "Childhood patterns cause adult behaviors cause relationship outcomes. Break cause chain, change effects. Healing is causation reversal.",
+        "description": "Mental health is causation tracking. Early attachment disruption → emotional regulation issues → relationship patterns → life outcomes. Therapy interrupts cause-effect chains by processing root causes, not just managing symptoms. Change the cause, transform all downstream effects."
+      },
+      "chef": {
+        "teenTranslation": "Knife cut size determines cooking time determines texture determines dish quality. Every technique choice cascades.",
+        "description": "Cooking is causation precision. Ingredient temp → sear quality → flavor development → final dish. Sauce reduction rate → concentration → balance → guest experience. Master chefs control cause at every step to determine exact effect."
+      },
+      "fitness": {
+        "teenTranslation": "Form determines load distribution determines adaptation determines results. One bad rep cascades into injury. Cause matters.",
+        "description": "Training is strict causation. Poor form → joint stress → inflammation → pain → compensation → injury. Or: Perfect form → targeted load → clean adaptation → strength gains → performance. Every rep is cause starting a chain—execute precisely."
+      },
+      "gardener": {
+        "teenTranslation": "Soil quality determines nutrient availability determines plant health determines harvest. Start at root cause for best effects.",
+        "description": "Garden is causation ecosystem. Soil pH → nutrient uptake → plant vigor → pest resistance → yield quality. Treat symptoms (spray pests) or address cause (balance soil). Master gardeners work upstream causes for downstream abundance."
+      }
+    },
+    "gender": {
+      "universal": {
+        "teenTranslation": "Different situations need different modes. Active vs receptive. Analytical vs intuitive. Structured vs flowing. Balance both instead of favoring one.",
+        "description": "Not biological—cognitive modes. Your brain has two systems: fast/intuitive (System 1) and slow/analytical (System 2). Different tasks need different modes. Best results? Know when to use which."
+      },
+      "gamer": {
+        "teenTranslation": "Need both modes. Analyze the VOD (logic) + trust your instincts in-game (intuition). Grind + rest. Solo queue + touch grass.",
+        "description": "Not biological—it's about playstyle balance. Aggressive push (masculine) + patient farm (feminine). Shotcall (masculine) + adapt (feminine). Mechanical skill + game sense. One-tricks lack this. Complete players balance both."
+      },
+      "business": {
+        "teenTranslation": "Need masculine execution AND feminine intuition. Aggressive growth AND patient cultivation. Strategic force AND adaptive flow.",
+        "description": "Business requires both energies. Masculine: decisive action, competition, goal-driven, structured systems. Feminine: market intuition, relationship cultivation, adaptive strategy, collaborative networks. Imbalanced = failure. All-masculine = rigid collapse. All-feminine = directionless drift."
+      },
+      "surfer": {
+        "teenTranslation": "Need masculine aggression to commit AND feminine flow to adapt. Push the lip AND read the wave. Balance both modes.",
+        "description": "Surfing is gender balance in motion. Masculine: explosive bottom turn, aggressive commitment, dominating the wave. Feminine: reading subtle water movements, flowing with sections, adaptive line choice. Best surfers blend both seamlessly."
+      },
+      "engineer": {
+        "teenTranslation": "Need masculine logic (systematic analysis) AND feminine intuition (elegant solutions). Structure AND creativity. Both required.",
+        "description": "Engineering requires both modes. Masculine: logical analysis, structured testing, rigorous documentation, systematic debugging. Feminine: intuitive design, elegant simplicity, holistic systems thinking, creative solutions. Great engineers integrate both."
+      },
+      "nurse": {
+        "teenTranslation": "Need feminine compassion (caring presence) AND masculine decisiveness (critical interventions). Nurture AND act. Both save lives.",
+        "description": "Healthcare demands both energies. Feminine: empathetic listening, holistic assessment, patient relationship, gentle care. Masculine: decisive action in crisis, assertive advocacy, structured protocols, clinical precision. Best nurses embody both."
+      },
+      "developer": {
+        "teenTranslation": "Need masculine structure (clean architecture, tests, types) AND feminine creativity (elegant abstractions, intuitive APIs). Balance both.",
+        "description": "Coding requires both modes. Masculine: systematic architecture, rigorous testing, type safety, structured deployment. Feminine: intuitive APIs, elegant abstractions, creative solutions, adaptive refactoring. 10x developers master both, not just one."
+      },
+      "therapist": {
+        "teenTranslation": "Need feminine empathy (holding space) AND masculine structure (boundaries, goals). Receive pain AND direct growth. Both heal.",
+        "description": "Therapy is gender principle mastery. Feminine: empathetic presence, unconditional acceptance, intuitive attunement, holding space for pain. Masculine: clear boundaries, goal-oriented intervention, structured homework, challenging distortions. Effective therapy requires both."
+      },
+      "chef": {
+        "teenTranslation": "Need masculine technique (precision, timing, control) AND feminine creativity (intuition, adaptation, artistry). Discipline AND flow.",
+        "description": "Cooking demands both energies. Masculine: precise knife work, exact timing, temperature control, structured mise en place. Feminine: creative flavor intuition, adaptive seasoning, artistic plating, sensory awareness. Master chefs integrate technique and artistry."
+      },
+      "fitness": {
+        "teenTranslation": "Need masculine intensity (pushing limits, competing) AND feminine wisdom (listening to body, resting). Force AND flow create gains.",
+        "description": "Training requires both modes. Masculine: aggressive progressive overload, competitive drive, structured programming, pushing through discomfort. Feminine: body awareness, intuitive recovery, adaptive training, respecting injury signals. Balance both for sustainable performance."
+      },
+      "gardener": {
+        "teenTranslation": "Need masculine structure (planning, building, pruning) AND feminine receptivity (observing, adapting, nurturing). Action AND patience.",
+        "description": "Gardening is gender balance practice. Masculine: structured bed design, decisive pruning, active pest control, goal-oriented harvesting. Feminine: patient observation, adaptive care, nurturing growth, receptivity to plant signals. Best gardens emerge from both energies."
+      }
+    }
+  }
+}
