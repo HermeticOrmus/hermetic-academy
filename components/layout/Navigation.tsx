@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { UserMenu } from "@/components/auth/UserMenu";
+import { LensSwitcher } from "@/components/language-lens/LensSwitcher";
 
 export function Navigation() {
   const pathname = usePathname();
@@ -34,8 +35,8 @@ export function Navigation() {
             </span>
           </Link>
 
-          {/* Navigation Links + User Menu */}
-          <div className="flex items-center space-x-8">
+          {/* Navigation Links + Lens Switcher + User Menu */}
+          <div className="flex items-center space-x-4 md:space-x-8">
             <div className="hidden md:flex items-center space-x-8">
               {links.map((link) => (
                 <Link
@@ -52,6 +53,9 @@ export function Navigation() {
                 </Link>
               ))}
             </div>
+
+            {/* Language Lens Switcher */}
+            <LensSwitcher compact />
 
             {/* User Menu (Sign In or Profile) */}
             <UserMenu />
