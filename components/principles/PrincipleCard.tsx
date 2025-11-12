@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import { getPrincipleColorById } from "@/lib/brand-colors";
+import { getPrincipleBySlug, getPrincipleTranslation } from "@/lib/constants";
+import { useLanguageLens } from "@/lib/hooks/useLanguageLens";
 
 interface PrincipleCardProps {
   id: number;
   title: string;
   subtitle: string;
-  description: string;
+  description?: string; // Now optional - will use lens-aware translation
   slug: string;
   isActive?: boolean;
   isCompleted?: boolean;
@@ -30,13 +32,20 @@ export function PrincipleCard({
   id,
   title,
   subtitle,
-  description,
+  description: propDescription,
   slug,
   isActive = false,
   isCompleted = false,
   onClick
 }: PrincipleCardProps) {
+  const { selectedLens } = useLanguageLens();
   const colors = getPrincipleColorById(id);
+
+  // Get lens-aware translation
+  const principle = getPrincipleBySlug(slug);
+  const translation = principle ? getPrincipleTranslation(principle, selectedLens) : null;
+  const description = propDescription || translation?.description || "";
+
   if (!colors) return null;
 
   return (

@@ -1,8 +1,12 @@
-import { Principle } from "@/lib/constants";
+'use client';
+
+import { Principle, getPrincipleTranslation } from "@/lib/constants";
+import { useLanguageLens } from "@/lib/hooks/useLanguageLens";
+import { LensIndicator } from "@/components/language-lens/LensIndicator";
 
 /**
  * Simple content display for principle pages
- * Replaces complex interactive experiences with clean educational content
+ * Now with Language Lens support - adapts content based on selected lens
  */
 
 interface PrincipleContentProps {
@@ -10,6 +14,8 @@ interface PrincipleContentProps {
 }
 
 export function PrincipleContent({ principle }: PrincipleContentProps) {
+  const { selectedLens } = useLanguageLens();
+  const translation = getPrincipleTranslation(principle, selectedLens);
   // Example content structure for each principle
   const contentMap: Record<string, { keyConcepts: string[]; examples: { title: string; description: string }[]; reflections: string[] }> = {
     mentalism: {
@@ -208,6 +214,11 @@ export function PrincipleContent({ principle }: PrincipleContentProps) {
   return (
     <section className="py-16 px-4">
       <div className="max-w-4xl mx-auto space-y-12">
+        {/* Lens Indicator */}
+        <div className="flex justify-center mb-6">
+          <LensIndicator />
+        </div>
+
         {/* Understanding Section */}
         <div>
           <h2 className="text-2xl font-semibold text-gray-200 mb-4">
@@ -218,7 +229,10 @@ export function PrincipleContent({ principle }: PrincipleContentProps) {
               "{principle.ancientTruth}"
             </span>
           </p>
-          <p className="text-gray-400 leading-relaxed">{principle.description}</p>
+          <p className="text-gray-400 leading-relaxed mb-2">
+            <strong className="text-gray-300">In your language:</strong> {translation.teenTranslation}
+          </p>
+          <p className="text-gray-400 leading-relaxed">{translation.description}</p>
         </div>
 
         {/* Key Concepts */}
