@@ -1,12 +1,28 @@
 /**
- * The 7 Hermetic Principles - Complete Data
+ * The 7 Hermetic Principles - Complete Data with Language Lens Support
  *
  * These constants define everything about each principle:
  * - Core teaching (ancient wisdom)
- * - Teen-friendly translation
+ * - Multi-lens translations (11 different domain languages)
  * - Interactive experience description
  * - Visual identity (colors, icons)
  */
+
+import translationsData from '@/content/principle-translations.json';
+
+export interface LanguageLens {
+  id: string;
+  name: string;
+  emoji: string;
+  description: string;
+  audience: string;
+  tone: string;
+}
+
+export interface PrincipleTranslation {
+  teenTranslation: string;
+  description: string;
+}
 
 export interface Principle {
   id: number;
@@ -14,8 +30,8 @@ export interface Principle {
   title: string;
   subtitle: string;
   ancientTruth: string;
-  teenTranslation: string;
-  description: string;
+  teenTranslation: string; // Default/fallback (will be replaced by lens-specific)
+  description: string; // Default/fallback (will be replaced by lens-specific)
   experienceType: string;
   experienceDescription: string;
   color: {
@@ -25,7 +41,11 @@ export interface Principle {
   };
   icon: string; // Icon identifier for components
   keywords: string[];
+  translations: Record<string, PrincipleTranslation>; // Lens-specific translations
 }
+
+// Export available lenses
+export const LENSES: LanguageLens[] = translationsData.lenses as LanguageLens[];
 
 export const PRINCIPLES: Principle[] = [
   {
@@ -34,8 +54,8 @@ export const PRINCIPLES: Principle[] = [
     title: "Mentalism",
     subtitle: "The All is Mind",
     ancientTruth: "The Universe is Mental—held in the Mind of THE ALL. Reality is a mental creation.",
-    teenTranslation: "Your mental game determines your rank. Tilt = lose. Focus = win. Same in League, same IRL.",
-    description: "Your mindset is your build. Go into any ranked match tilted and you're hardstuck. Same with life—your mental determines what reality raid boss you're facing. Not magic. Just how the game works.",
+    teenTranslation: "Your mental framework determines what you notice and how you interpret events. Change your lens, change your experience.",
+    description: "Your brain filters reality through expectations. Anxious? You notice threats. Curious? You spot opportunities. Same event, different mental filter = different experience. Psychology, not magic.",
     experienceType: "Mind Map Builder",
     experienceDescription: "Create a mind map starting with a single thought. Watch how one idea connects to another, then another. See how changing a core belief reshapes everything connected to it.",
     color: {
@@ -45,6 +65,7 @@ export const PRINCIPLES: Principle[] = [
     },
     icon: "brain-circuit",
     keywords: ["consciousness", "thoughts", "reality", "mind", "creation", "focus"],
+    translations: translationsData.principles.mentalism as Record<string, PrincipleTranslation>,
   },
   {
     id: 2,
@@ -52,8 +73,8 @@ export const PRINCIPLES: Principle[] = [
     title: "Correspondence",
     subtitle: "As Above, So Below",
     ancientTruth: "As above, so below; as below, so above. Patterns repeat across all scales of existence.",
-    teenTranslation: "Same mechanics everywhere. Lane phase mirrors teamfight. Your jungle pathing reflects your life strategy. Patterns stack.",
-    description: "Every system uses the same mechanics at different scales. How you cs in lane = how you handle IRL goals. Team coordination in WoW raids = how you coordinate projects. Master one level, understand all levels.",
+    teenTranslation: "Patterns repeat at different scales. How you organize your desk mirrors how you organize your life. Same structure, different size.",
+    description: "How you handle small things mirrors how you handle big things. Same patterns at different scales. Fractals prove this mathematically—one equation describes trees, rivers, lungs, galaxies.",
     experienceType: "Fractal Zoom Explorer",
     experienceDescription: "Zoom from atomic to cosmic scales. See the same geometric patterns repeat: spirals in galaxies, in hurricanes, in seashells, in DNA. Watch how structure mirrors across magnitudes.",
     color: {
@@ -63,6 +84,7 @@ export const PRINCIPLES: Principle[] = [
     },
     icon: "nested-circles",
     keywords: ["patterns", "fractals", "scales", "mirroring", "microcosm", "macrocosm"],
+    translations: translationsData.principles.correspondence as Record<string, PrincipleTranslation>,
   },
   {
     id: 3,
@@ -70,8 +92,8 @@ export const PRINCIPLES: Principle[] = [
     title: "Vibration",
     subtitle: "Nothing Rests",
     ancientTruth: "Nothing rests; everything moves; everything vibrates. Different rates of vibration create different forms.",
-    teenTranslation: "Energy is momentum. High energy = aggressive plays. Low energy = defensive rotations. You control the tempo.",
-    description: "Everything has momentum and frequency. Aggressive playstyle vs defensive playstyle—same game, different frequency. Tilt is low-frequency chaos. Flow state is high-frequency clarity. You shift the vibe, you shift the game.",
+    teenTranslation: "Nothing is static. Your mood shifts, markets fluctuate, energy cycles between states. Recognizing state changes gives you leverage.",
+    description: "Nothing stays still. Your mood shifts, markets cycle, atoms literally vibrate. Recognizing these state changes lets you work with momentum instead of fighting it. Physics + psychology, not magic.",
     experienceType: "Frequency Visualizer",
     experienceDescription: "Use your microphone to see sound waves as visual patterns. Watch how different frequencies create different shapes. Play with tones and watch reality respond in real-time.",
     color: {
@@ -81,6 +103,7 @@ export const PRINCIPLES: Principle[] = [
     },
     icon: "waveform",
     keywords: ["frequency", "energy", "motion", "vibrations", "resonance", "sound"],
+    translations: translationsData.principles.vibration as Record<string, PrincipleTranslation>,
   },
   {
     id: 4,
@@ -88,8 +111,8 @@ export const PRINCIPLES: Principle[] = [
     title: "Polarity",
     subtitle: "Everything is Dual",
     ancientTruth: "Everything is Dual; everything has poles. Opposites are identical in nature but different in degree.",
-    teenTranslation: "Aggro and passive are the same stat (risk). Win streaks and lose streaks both teach. Every strength has a counter.",
-    description: "Opposites are just different settings on the same slider. Full tank build vs full damage—both extremes on the survivability spectrum. Understanding both makes you adaptable. Best players slide between poles mid-match.",
+    teenTranslation: "Hot and cold are the same thing (temperature) at different intensities. Opposites are degrees on a spectrum, not separate categories.",
+    description: "Hot and cold aren't opposites—they're the same thing (temperature) at different levels. Same with emotions, behaviors, traits. Understanding this spectrum makes you adaptable. You can shift.",
     experienceType: "Perspective Flip Game",
     experienceDescription: "Explore real situations from opposite viewpoints. See how the same event looks completely different from each side. Practice moving your consciousness between poles to find balance.",
     color: {
@@ -99,6 +122,7 @@ export const PRINCIPLES: Principle[] = [
     },
     icon: "yin-yang",
     keywords: ["duality", "opposites", "balance", "perspective", "poles", "spectrum"],
+    translations: translationsData.principles.polarity as Record<string, PrincipleTranslation>,
   },
   {
     id: 5,
@@ -106,8 +130,8 @@ export const PRINCIPLES: Principle[] = [
     title: "Rhythm",
     subtitle: "Everything Flows",
     ancientTruth: "Everything flows out and in; everything has its tides. The pendulum-swing manifests in everything.",
-    teenTranslation: "Can't grind 24/7. Burnout kills your rank harder than one bad game. Clean rotation = peak + rest. Pros know this.",
-    description: "Everything runs in cycles—win streaks and lose streaks, grind sessions and cooldowns, meta shifts and off-meta. Fighting the rhythm burns you out. Working with it keeps you climbing. Even Faker takes breaks. This is law.",
+    teenTranslation: "Everything moves in cycles. Day/night, seasons, your energy, attention span. Fighting natural rhythms burns you out. Working with them creates flow.",
+    description: "Everything cycles: day/night, seasons, your energy (90-min focus periods), markets. Your biology has built-in rhythms. Fighting them wastes energy. Working with them multiplies output. Science.",
     experienceType: "Cycle Tracker",
     experienceDescription: "Visualize natural cycles: day/night, seasons, moon phases, energy levels. Track your own rhythms (sleep, focus, mood) and see how they sync with larger patterns.",
     color: {
@@ -117,6 +141,7 @@ export const PRINCIPLES: Principle[] = [
     },
     icon: "sine-wave",
     keywords: ["cycles", "rhythm", "seasons", "flow", "tides", "pendulum"],
+    translations: translationsData.principles.rhythm as Record<string, PrincipleTranslation>,
   },
   {
     id: 6,
@@ -124,8 +149,8 @@ export const PRINCIPLES: Principle[] = [
     title: "Cause & Effect",
     subtitle: "Every Cause Has Its Effect",
     ancientTruth: "Every Cause has its Effect; every Effect has its Cause. Nothing happens by chance.",
-    teenTranslation: "Every input creates an output. One bad positioning = lost teamfight = lost game. Chain reactions. Nothing is RNG except the loot table.",
-    description: "Every action chains into consequences. Miss one cs, lose lane pressure, lose tower, lose map control. Or: ward river, spot jungler, ping team, win fight. Mastering cause-effect means you control the game instead of reacting to it.",
+    teenTranslation: "Every action creates ripples. Small choices compound over time. Understanding cause-effect chains gives you predictive power.",
+    description: "Actions chain into consequences. Skip breakfast → low focus → missed deadline → stress → poor sleep. Small causes compound into big effects. Understanding chains gives you control, not just reaction.",
     experienceType: "Chain Reaction Simulator",
     experienceDescription: "Make a small choice. Watch it cascade into consequences. See how one action triggers another, then another. Replay scenarios with different starting choices to understand your power.",
     color: {
@@ -135,6 +160,7 @@ export const PRINCIPLES: Principle[] = [
     },
     icon: "chain-links",
     keywords: ["causality", "consequences", "ripples", "karma", "actions", "chain"],
+    translations: translationsData.principles["cause-effect"] as Record<string, PrincipleTranslation>,
   },
   {
     id: 7,
@@ -142,8 +168,8 @@ export const PRINCIPLES: Principle[] = [
     title: "Gender",
     subtitle: "Gender is in Everything",
     ancientTruth: "Gender is in everything; everything has its Masculine and Feminine Principles. Balance creates generation.",
-    teenTranslation: "Need both modes. Analyze the VOD (logic) + trust your instincts in-game (intuition). Grind + rest. Solo queue + touch grass.",
-    description: "Not biological—it's about playstyle balance. Aggressive push (masculine) + patient farm (feminine). Shotcall (masculine) + adapt (feminine). Mechanical skill + game sense. One-tricks lack this. Complete players balance both.",
+    teenTranslation: "Different situations need different modes. Active vs receptive. Analytical vs intuitive. Structured vs flowing. Balance both instead of favoring one.",
+    description: "Not biological—cognitive modes. Your brain has two systems: fast/intuitive (System 1) and slow/analytical (System 2). Different tasks need different modes. Best results? Know when to use which.",
     experienceType: "Balance Visualizer",
     experienceDescription: "Explore activities and qualities as masculine or feminine energies. Drag them onto a balance scale. See how different situations require different balances. Find your personal equilibrium.",
     color: {
@@ -153,6 +179,7 @@ export const PRINCIPLES: Principle[] = [
     },
     icon: "balance-scale",
     keywords: ["masculine", "feminine", "balance", "energy", "integration", "wholeness"],
+    translations: translationsData.principles.gender as Record<string, PrincipleTranslation>,
   },
 ];
 
@@ -194,4 +221,30 @@ export function getProgressText(completed: number[]): string {
   if (count === 0) return "Begin your journey";
   if (count === 7) return "Journey complete! 🌟";
   return `${count} of 7 principles explored`;
+}
+
+/**
+ * Get principle translation for specific lens
+ */
+export function getPrincipleTranslation(
+  principle: Principle,
+  lensId: string = 'universal'
+): { teenTranslation: string; description: string } {
+  // Return lens-specific translation if available
+  if (principle.translations && principle.translations[lensId]) {
+    return principle.translations[lensId];
+  }
+
+  // Fallback to default (universal)
+  return {
+    teenTranslation: principle.teenTranslation,
+    description: principle.description
+  };
+}
+
+/**
+ * Get lens by ID
+ */
+export function getLensById(lensId: string): LanguageLens | undefined {
+  return LENSES.find(lens => lens.id === lensId);
 }
