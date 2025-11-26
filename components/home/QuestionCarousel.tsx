@@ -1,33 +1,36 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-const QUESTIONS = [
-  "Why is everyone getting diagnosed with ADHD?",
-  "Why are dating apps so terrible?",
-  "Why is housing so unaffordable?",
-  "Why can't I focus anymore?",
-  "Why is everyone so lonely?",
-  "Why does nothing feel meaningful?",
-  "What's causing the mental health crisis?",
-  "Why do I feel stuck in life?",
-];
+import { useTone } from "@/contexts/ToneContext";
+import { getContent } from "@/lib/tone-content";
 
 export function QuestionCarousel() {
+  const { tone } = useTone();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+
+  // Get questions from tone content (stored as array in the content)
+  const questionsRaw = getContent("questions", tone);
+  const questions = Array.isArray(questionsRaw) ? questionsRaw : [
+    "is everyone so anxious?",
+    "do dating apps feel hollow?",
+    "is housing unaffordable?",
+    "does social media drain you?",
+    "are people so polarized?",
+  ];
+  const prefix = getContent("questionPrefix", tone);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % QUESTIONS.length);
+        setCurrentIndex((prev) => (prev + 1) % questions.length);
         setIsAnimating(false);
       }, 300);
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [questions.length]);
 
   return (
     <div className="relative h-24 flex items-center justify-center">
@@ -36,7 +39,7 @@ export function QuestionCarousel() {
           isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
         }`}
       >
-        {QUESTIONS[currentIndex]}
+        {prefix} {questions[currentIndex]}
       </div>
     </div>
   );
