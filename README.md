@@ -1,5 +1,21 @@
-# Hermetic Academy
+<p align="center">
+  <img src="https://ormus.solutions/mascot/chain_braces_to_swan.gif" alt="Hermetic Academy" width="128" style="image-rendering: pixelated;" />
+</p>
 
+<h1 align="center">Hermetic Academy</h1>
+
+<p align="center">
+  <em>Interactive webapp teaching the 7 Hermetic Principles through beautiful experiences. Sacred technology built with Gold Hat philosophy - empowerment, not extraction.</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/HermeticOrmus/hermetic-academy/stargazers"><img src="https://img.shields.io/github/stars/HermeticOrmus/hermetic-academy?style=flat-square&color=aa8142" alt="Stars" /></a>
+  <a href="https://github.com/HermeticOrmus/hermetic-academy/blob/main/LICENSE"><img src="https://img.shields.io/github/license/HermeticOrmus/hermetic-academy?style=flat-square&color=aa8142" alt="License" /></a>
+  <a href="https://github.com/HermeticOrmus/hermetic-academy/commits"><img src="https://img.shields.io/github/last-commit/HermeticOrmus/hermetic-academy?style=flat-square&color=aa8142" alt="Last Commit" /></a>
+  <img src="https://img.shields.io/badge/Claude_Code-aa8142?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code" />
+</p>
+
+---
 **Interactive webapp teaching the 7 Hermetic Principles to youth (ages 11-18)**
 
 ![Status](https://img.shields.io/badge/status-in_development-yellow)
